@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+/**
+ * @author Prenom Nom courriel
+ * @todo Lier les modules avec des instructions @import
+ * @todo Compléter selon l'énoncé de l'exercice
+ */
+
+/*
+ * ------------------
+ * TABLE DES MATIERES
+ * ------------------
+ * Librairies
+ ** Normalize
+ * UTILITAIRES
+ ** Variables
+ ** Mixins
+ * BASE
+ ** Typographie
+ ** Hyperliens
+ ** Boutons
+ * MODULES
+ ** gds - Styles généraux du Guide de styles
+ ** palette - Palette de couleurs
+ ** listeInteractivite - Éléments interactifs
+ */
+
+/****** Librairies ******/
+
+/** Normalize **/
+@import '../../../node_modules/normalize.scss/normalize.scss';
+
+/**** UTILITAIRES ****/
+
+/** Variables **/
+@import 'utilitaires/variables';
+
+/** Mixins **/
+@import 'utilitaires/mixins';
+
+/** General **/
+@import 'layout/general';
+
+/****** BASE ******/
+
+/** Typographie **/
+@import 'base/typo';
+
+/** Hyperliens **/
+@import 'base/hyperlien';
+
+/** Boutons **/
+@import 'base/bouton';
+
+/****** MODULES ******/
+
+/** Page Finissants **/
+@import 'modules/finissants';
+
+/** Page Réalisations **/
+@import 'modules/realisations';
+
+/** Page Programme **/
+@import 'modules/programme';
+
+/** Page Stages **/
+@import 'modules/stages';
+
+/** Entete **/
+@import 'modules/entete';
+
+/** Pied de page **/
+@import 'modules/pieddepage';
+
+/** Navigation **/
+@import 'modules/navigation';
+
+/** Navigation **/
+@import 'modules/article';
+
+/** gds - Styles généraux du Guide de styles **/
+@import 'modules/gds';
+
+/** palette - Palette de couleurs **/
+@import 'modules/palette';
+
+/** listeInteractivite - Éléments interactifs **/
+@import 'modules/listeInteractivite';
