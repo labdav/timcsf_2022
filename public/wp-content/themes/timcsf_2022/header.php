@@ -14,16 +14,18 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/liaisons/css/styles.css"/>
     <?php wp_head(); ?>
 </head>
-<body>
+<body class="body">
 <header class="entete">
-    <h1 class="entete__titre">
-        <a href="<?php bloginfo("url");?>" title="<?php bloginfo("name");?>"><?php bloginfo("name");?></a>
-    </h1>
-    <h2 class="entete__slogan"><?php bloginfo('description');?></h2>
-</header>
+    <div class="entete__nav">
+        <div class="entete__mobile">
+            <img class="entete__logo" alt="Logo du l'entête" src="">
+        </div>
+    </div>
     <?php if(has_nav_menu('principal')){?>
         <nav class="navigation">
             <?php wp_nav_menu(array('theme_location' => 'principal'));?>
         </nav>
     <?php } ?>
-<div class="contenu">
+    <img class="entete__imageHero" alt="Image héro du site" src="<?php echo get_template_directory_uri();?>/liaisons/images/image_banniere.png">
+
+</header>

@@ -1,0 +1,75 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__fiches {
+    display: flex;
+    justify-content: center;
+  }
+  &__fichesResponsables {
+    display: flex;
+    flex-direction: column;
+  }
+  &__ficheResponsable {
+    width: 375px;
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    margin-bottom: 3em;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  &__ficheResponsable:last-child {
+    margin-left: -5em;
+  }
+  &__ficheResponsableEtiquette {
+    color: white;
+    width: 100%;
+    height: 115px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  &__bouton {
+    position: absolute;
+    top: 93%;
+    z-index: 99;
+  }
+  &__formulaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 4em;
+  }
+  @media only screen and (min-width: 600px) {
+    &__formulaire {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 4em;
+    }
+  }
+  &__formContainerInputs {
+    display: flex;
+    flex-direction: column;
+  }
+  &__formContainerDestinataire {
+    display: flex;
+    flex-direction: column;
+  }
+  @media only screen and (min-width: 600px) {
+    &__fichesResponsables {
+      max-width: 1000px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    &__formulaire {
+      width: 800px;
+      padding: 100px;
+      border: 2px solid #377CAF;
+      border-radius: 7px;
+    }
+  }
+}

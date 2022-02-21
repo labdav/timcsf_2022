@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<id><![CDATA[1]]></id>
+		<nom><![CDATA[Introduction à la programmation]]></nom>
+		<session><![CDATA[1]]></session>
+	</node>
+	<node>
+		<id><![CDATA[2]]></id>
+		<nom><![CDATA[Design d'interface I]]></nom>
+		<session><![CDATA[1]]></session>
+	</node>
+	<node>
+		<id><![CDATA[3]]></id>
+		<nom><![CDATA[Culture numérique et communication]]></nom>
+		<session><![CDATA[1]]></session>
+	</node>
+	<node>
+		<id><![CDATA[4]]></id>
+		<nom><![CDATA[Intégration I]]></nom>
+		<session><![CDATA[1]]></session>
+	</node>
+	<node>
+		<id><![CDATA[5]]></id>
+		<nom><![CDATA[Profession intégrateur]]></nom>
+		<session><![CDATA[1]]></session>
+	</node>
+	<node>
+		<id><![CDATA[6]]></id>
+		<nom><![CDATA[Programmation Web et multimédia I]]></nom>
+		<session><![CDATA[2]]></session>
+	</node>
+	<node>
+		<id><![CDATA[7]]></id>
+		<nom><![CDATA[Design d'interface II]]></nom>
+		<session><![CDATA[2]]></session>
+	</node>
+	<node>
+		<id><![CDATA[8]]></id>
+		<nom><![CDATA[Montage médiatique : animation]]></nom>
+		<session><![CDATA[2]]></session>
+	</node>
+	<node>
+		<id><![CDATA[9]]></id>
+		<nom><![CDATA[Intégration II]]></nom>
+		<session><![CDATA[2]]></session>
+	</node>
+	<node>
+		<id><![CDATA[10]]></id>
+		<nom><![CDATA[Programmation web et multimédia II]]></nom>
+		<session><![CDATA[3]]></session>
+	</node>
+	<node>
+		<id><![CDATA[11]]></id>
+		<nom><![CDATA[Conception interactive I]]></nom>
+		<session><![CDATA[3]]></session>
+	</node>
+	<node>
+		<id><![CDATA[12]]></id>
+		<nom><![CDATA[Montage médiatique : vidéo]]></nom>
+		<session><![CDATA[3]]></session>
+	</node>
+	<node>
+		<id><![CDATA[13]]></id>
+		<nom><![CDATA[Réalisation de produits numériques interactifs I]]></nom>
+		<session><![CDATA[3]]></session>
+	</node>
+	<node>
+		<id><![CDATA[14]]></id>
+		<nom><![CDATA[Programmation web et multimédia III]]></nom>
+		<session><![CDATA[4]]></session>
+	</node>
+	<node>
+		<id><![CDATA[15]]></id>
+		<nom><![CDATA[Conception interactive II]]></nom>
+		<session><![CDATA[4]]></session>
+	</node>
+	<node>
+		<id><![CDATA[16]]></id>
+		<nom><![CDATA[Montage médiatique : plurimédia]]></nom>
+		<session><![CDATA[4]]></session>
+	</node>
+	<node>
+		<id><![CDATA[17]]></id>
+		<nom><![CDATA[Réalisation de produits numériques interactifs II]]></nom>
+		<session><![CDATA[4]]></session>
+	</node>
+	<node>
+		<id><![CDATA[18]]></id>
+		<nom><![CDATA[Programmation web et multimédia IV]]></nom>
+		<session><![CDATA[5]]></session>
+	</node>
+	<node>
+		<id><![CDATA[19]]></id>
+		<nom><![CDATA[Réalisation de produits numériques interactifs III]]></nom>
+		<session><![CDATA[5]]></session>
+	</node>
+	<node>
+		<id><![CDATA[20]]></id>
+		<nom><![CDATA[Analyse et conception de projets]]></nom>
+		<session><![CDATA[5]]></session>
+	</node>
+	<node>
+		<id><![CDATA[21]]></id>
+		<nom><![CDATA[Programmation spécialisée]]></nom>
+		<session><![CDATA[5]]></session>
+	</node>
+	<node>
+		<id><![CDATA[22]]></id>
+		<nom><![CDATA[Projet de recherche]]></nom>
+		<session><![CDATA[6]]></session>
+	</node>
+	<node>
+		<id><![CDATA[23]]></id>
+		<nom><![CDATA[Réalisation de produits numériques interactifs IV]]></nom>
+		<session><![CDATA[6]]></session>
+	</node>
+	<node>
+		<id><![CDATA[24]]></id>
+		<nom><![CDATA[Stage et activités professionnelles]]></nom>
+		<session><![CDATA[6]]></session>
+	</node>
+</data>

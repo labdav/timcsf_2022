@@ -1,24 +1,36 @@
-* {
-  box-sizing: border-box;
+main {
+
 }
 
-body {
-  margin: 0 10px;
-  padding: 0;
-  font: .8em Verdana, Arial, Helvetica, sans-serif;
+/* Éléments de formulaire généraux */
+
+label {
+  color: #595959;
 }
 
-.contenu {
-  max-width: 960px;
-  margin: 0 auto;
+.champMoyen {
+  width: 250px;
+  height: 35px;
+  background-color: #FAFAFA;
+  border: 1px solid #A1A1A1;
+  margin-bottom: 2em;
+  border-radius: 3px;
 }
 
-.page {
-  float: left;
-  width: 70%;
-  @media only screen and (max-width: 735px) {
-    float: none;
-    width: 100%;
-    border-bottom: 1px solid #333;
-  }
+.champMessageLong {
+  width: 250px;
+  height: 165px;
+  background-color: #FAFAFA;
+  border: 1px solid #A1A1A1;
+  border-radius: 3px;
+  margin-bottom: 2em;
+}
+
+.formSelect {
+  width: 250px;
+  height: 35px;
+  background-color: #FAFAFA;
+  border: 1px solid #A1A1A1;
+  margin-bottom: 2em;
+  border-radius: 3px;
 }

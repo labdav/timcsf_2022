@@ -425,411 +425,506 @@ th {
 /**** UTILITAIRES ****/
 /** Variables **/
 /**
-* @author Prenom Nom courriel
-* @todo Importer la fonte Futura
-* @todo Personnaliser les variables selon les spécifications du guide visuel
-*       Certaines variables devront être définies par une fonction de coloration
-* @todo Compléter selon l'énoncé de l'exercice
-* @todo Utiliser le sélecteur & pour les sélecteurs des différentes couleurs
+* @author David Laberge
 */
-/** Polices de caractères **/
-@font-face {
-  font-family: Futura, sans-serif;
-  src: url("../fonts/Futura.ttc") format("truetype");
-}
-/** Palette de couleurs **/
-/* Couleurs de base */
-/* Autres couleurs */
-/** Points de rupture **/
 /** Mixins **/
 /**
-* @author Ève Février - efevrier@cegep-ste-foy.qc.ca
-* @author Yves Hélie - yves.helie@cegep-ste-foy.qc.ca
+* @author David Laberge
 */
-/**
- * ----------------------------
- * TABLE DES MATIERES - MIXINS
- * ----------------------------
- * Utilitaires de base
- ** Box sizing
- ** Clearfix
- * Accessibilité
- * Typographie
- */
-/********** Utilitaires de base **********/
-/** Box sizing **/
-/* Clearfix */
-/********* Accessibilité *********/
-.visuallyhidden,
-.screen-reader-only {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus,
-.screen-reader-only.focusable:active,
-.screen-reader-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-
-/******** Typographie *********/
 /** General **/
-* {
-  box-sizing: border-box;
+/* Éléments de formulaire généraux */
+label {
+  color: #595959;
 }
 
-body {
-  margin: 0 10px;
-  padding: 0;
-  font: 0.8em Verdana, Arial, Helvetica, sans-serif;
+.champMoyen {
+  width: 250px;
+  height: 35px;
+  background-color: #FAFAFA;
+  border: 1px solid #A1A1A1;
+  margin-bottom: 2em;
+  border-radius: 3px;
 }
 
-.contenu {
-  max-width: 960px;
-  margin: 0 auto;
+.champMessageLong {
+  width: 250px;
+  height: 165px;
+  background-color: #FAFAFA;
+  border: 1px solid #A1A1A1;
+  border-radius: 3px;
+  margin-bottom: 2em;
 }
 
-.page {
-  float: left;
-  width: 70%;
-}
-@media only screen and (max-width: 735px) {
-  .page {
-    float: none;
-    width: 100%;
-    border-bottom: 1px solid #333;
-  }
+.formSelect {
+  width: 250px;
+  height: 35px;
+  background-color: #FAFAFA;
+  border: 1px solid #A1A1A1;
+  margin-bottom: 2em;
+  border-radius: 3px;
 }
 
 /****** BASE ******/
 /** Typographie **/
 /**
-* @author Prenom Nom courriel
-* @todo Préciser l’interlignage sur le body pour l’écran large
-* @todo Utiliser le mixin fontSize pour définir les tailles de polices
-* @todo Utiliser une variable pour la media query de la règle body
+* @author David Laberge
 */
-/**** Typographie responsive ****/
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.375;
-  /* facteur multiplicateur de la taille de la police 1.375x16=22 */
-}
-h1,
-.titreNiveau1,
-h2,
-.titreNiveau2,
-h3,
-.titreNiveau3 {
-  font-family: Futura, sans-serif;
-  font-weight: 500;
-}
-
-h1,
-.titreNiveau1 {
-  font-size: 28px;
-  font-size: 2.8rem;
-  margin: 0;
-}
-h1--desktop,
-.titreNiveau1--desktop {
-  font-size: 48px;
-  font-size: 4.8rem;
-  padding-bottom: 15px;
-  position: relative;
-}
-h1--desktop:after,
-.titreNiveau1--desktop:after {
-  background-color: #358ae0;
-  content: "";
-  display: inline-block;
-  width: 150px;
-  height: 8px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-h2,
-.titreNiveau2 {
-  font-size: 20px;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-h2--desktop,
-.titreNiveau2--desktop {
-  font-size: 28px;
-  font-size: 2.8rem;
-}
-
-h3,
-.titreNiveau3 {
-  font-size: 18px;
-  font-size: 1.8rem;
-}
-h3--desktop,
-.titreNiveau3--desktop {
-  font-size: 22px;
-  font-size: 2.2rem;
-}
-
-.texte {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.375;
-}
-.texte--desktop {
-  line-height: 1.5;
-}
-
 /** Hyperliens **/
 /**
 * @author Prenom Nom courriel
-* @todo Compléter selon l'énoncé de l'exercice
 */
-.hyperlien {
-  color: #2678B5;
-  text-decoration: none;
-}
-.hyperlien--visited {
-  color: #226aa0;
-}
-.hyperlien--hover {
-  color: #144061;
-  text-decoration: underline;
-}
-.hyperlien--active {
-  color: #bbd531;
-  text-decoration: underline;
-}
-
 /** Boutons **/
 /**
-* @author Prenom Nom courriel
-* @todo Compléter selon l'énoncé de l'exercice
+* @author David Laberge
 */
-.bouton {
-  background-color: blue;
-  border-radius: 18px;
-  color: black;
-  padding: 0.5em 1em;
-  text-decoration: none;
-}
-.bouton:after {
-  content: "»";
-  margin-left: 0.4em;
-}
-.bouton--hover {
-  background-color: rgba(187, 213, 49, 0.75);
-}
-.bouton--active {
-  background-color: rgba(187, 213, 49, 0.5);
-}
-.bouton--inverse {
-  background-color: white;
-  border: 2px solid #bbd531;
-}
-.bouton--inverse--hover {
-  border-color: rgba(187, 213, 49, 0.75);
-}
-.bouton--inverse--active {
-  border-color: rgba(187, 213, 49, 0.5);
+button {
+  background-color: #F3D250;
+  min-width: 220px;
+  min-height: 50px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  font-weight: bold;
 }
 
 /****** MODULES ******/
+/** Page Accueil **/
+.acc__descProgramme {
+  margin: 0 5%;
+  z-index: 999;
+}
+.acc__descProgramme button {
+  margin: 2.5em 0 5em 0;
+}
+@media only screen and (min-width: 600px) {
+  .acc__descProgramme {
+    display: flex;
+    flex-direction: row;
+  }
+  .acc__descProgrammeContainer {
+    max-width: 60%;
+    margin: 1em 0;
+    position: relative;
+  }
+  .acc__descProgrammeTexte {
+    max-width: 85%;
+    margin-top: 4em;
+  }
+  .acc__descProgramme button {
+    margin: 3.5em 0 0 5em;
+    max-height: 60px;
+    width: 300px;
+  }
+}
+.acc__vagueRealisations {
+  margin-top: -4em;
+}
+@media only screen and (min-width: 600px) {
+  .acc__vagueRealisations {
+    margin-bottom: -4em;
+  }
+}
+.acc__realisations {
+  background-color: #377CAF;
+  margin-top: -40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.acc__realiGallerie {
+  display: flex;
+  flex-direction: column;
+  /* À changer avec le caroussel */
+  align-items: center;
+  padding-top: 2em;
+}
+@media only screen and (min-width: 600px) {
+  .acc__realiGallerie {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 5% 3em;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    background-color: #ECECEC;
+    border-radius: 7px;
+  }
+  .acc__realiGallerie div:nth-child(5) {
+    margin: 0 0.7em 0 0;
+  }
+  .acc__realiGallerie div:nth-child(4) {
+    margin: 0 1em 0 0.8em;
+  }
+}
+.acc__realiTitre {
+  color: white;
+}
+.acc__realiFiche {
+  border-radius: 7px;
+  width: 291px;
+  height: 168px;
+  margin: 1.5em 0;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.acc__realiFicheFond {
+  background-color: black;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  opacity: 55%;
+  height: 77px;
+  width: inherit;
+  position: absolute;
+}
+.acc__realiFicheEtiquette > * {
+  color: white;
+  margin-left: 2em;
+}
+.acc__realiFicheEtiquetteTitre {
+  margin-top: 2em;
+}
+.acc__realiFicheEtiquetteConcepteur {
+  margin-top: -1em;
+}
+.acc__realiFicheEtiquette {
+  z-index: 99;
+}
+.acc__realiGallerie button {
+  margin: 1.5em 0 3em;
+}
+.acc__temoignages {
+  background-color: #F6F6F6;
+  padding: 1.5em 0;
+}
+.acc__temoiTitre {
+  margin: 1em 0 2em 20%;
+}
+.acc__temoiContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .acc__temoiFiche {
+    margin: 0 5% 0;
+    background-color: #FFFFFF;
+    border: 3px solid #498EC1;
+    border-radius: 8px;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .acc__temoignages {
+    display: flex;
+    flex-direction: column;
+  }
+  .acc__temoiFiche {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin: 0 5% 0;
+    background-color: #FFFFFF;
+    border: 3px solid #498EC1;
+    border-radius: 8px;
+    margin-bottom: 3em;
+  }
+  .acc__temoiContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: normal;
+  }
+  .acc__temoiPhoto {
+    height: 168px;
+    margin-left: 7%;
+  }
+  .acc__temoiNomTemoin {
+    margin: 2em 0 1em 5%;
+  }
+  .acc__temoiEtiquettes {
+    display: flex;
+    flex-direction: row;
+  }
+  .acc__temoiEtiquettes > * {
+    min-width: 184px;
+    margin-left: 2.3em;
+    max-height: 60px;
+  }
+}
+.acc__temoiTexteDesc {
+  margin: 1em 2em 2.5em;
+}
+.acc__temoiPhoto {
+  border-radius: 50%;
+  margin-top: 2em;
+  border: 4px solid #498EC1;
+}
+.acc__temoiEtiquettesAnnee {
+  background-color: #FF9C9C;
+  border: 3px solid #CD7474;
+  padding: 0 0.2em;
+}
+.acc__temoiEtiquettePoste {
+  background-color: #FF9C9C;
+  border: 3px solid #CD7474;
+  padding: 0 0.2em;
+}
+.acc__temoiEtiquettesPosteTexte {
+  font-size: 0.8em;
+}
+.acc__temoiEtiquettePoste, .acc__temoiEtiquettesAnnee {
+  max-width: 260px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.acc__plusDInfoTitre {
+  margin-top: 2em;
+}
+.acc__plusFiche {
+  margin: 0 5%;
+  border: 3px solid #F78888;
+  border-radius: 7px;
+  margin-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.acc__plusFicheZoneTitre {
+  background-color: #F78888;
+  width: 100%;
+  text-align: center;
+}
+.acc__plusFicheTexte {
+  margin: 1em 1.5em 4em;
+}
+.acc__plusFiche button {
+  margin-bottom: 1.5em;
+}
+@media only screen and (min-width: 600px) {
+  .acc__plusDInfoContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .acc__plusFiches {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: -2em;
+  }
+  .acc__plusFiche {
+    margin: 0 0 2em 2em;
+    max-width: 306px;
+    min-width: 306px;
+    height: 350px;
+  }
+  .acc__plusFiche:nth-child(3) {
+    margin-top: 12em;
+  }
+  .acc__plusFiche:nth-child(2) {
+    margin-top: 6em;
+  }
+}
+.acc__zoneInscription {
+  background-image: url("./../images/image_inscription.png");
+  width: 100%;
+  height: 333px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerBoutonInscription {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: center;
+}
+
+/** Page Accueil **/
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact__fiches {
+  display: flex;
+  justify-content: center;
+}
+.contact__fichesResponsables {
+  display: flex;
+  flex-direction: column;
+}
+.contact__ficheResponsable {
+  width: 375px;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  margin-bottom: 3em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.contact__ficheResponsable:last-child {
+  margin-left: -5em;
+}
+.contact__ficheResponsableEtiquette {
+  color: white;
+  width: 100%;
+  height: 115px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.contact__bouton {
+  position: absolute;
+  top: 93%;
+  z-index: 99;
+}
+.contact__formulaire {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 4em;
+}
+@media only screen and (min-width: 600px) {
+  .contact__formulaire {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4em;
+  }
+}
+.contact__formContainerInputs {
+  display: flex;
+  flex-direction: column;
+}
+.contact__formContainerDestinataire {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 600px) {
+  .contact__fichesResponsables {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .contact__formulaire {
+    width: 800px;
+    padding: 100px;
+    border: 2px solid #377CAF;
+    border-radius: 7px;
+  }
+}
+
 /** Page Finissants **/
 /** Page Réalisations **/
 /** Page Programme **/
 /** Page Stages **/
 /** Entete **/
 .entete {
-  max-width: 960px;
+  max-width: 100%;
   margin: 0 auto;
-  background-color: #eee;
-  border-bottom: 1px solid #323;
+  background-color: #000000;
 }
-.entete__titre {
-  margin: 0;
-  padding: 10px;
+.entete ul {
+  max-width: 1000px;
+  margin: 0 auto 1em;
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-between;
 }
-.entete__slogan {
-  margin: 0;
-  padding: 10px;
+.entete img {
+  width: 100%;
+  display: flex;
+  align-self: flex-end;
+}
+.entete__mobile {
+  /* Afficher le logo dans la barre supérieure en mobile */
+  display: none;
+}
+
+.menu {
+  margin-top: 0;
+  padding: 0;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
 }
 
 /** Pied de page **/
-.piedDePage {
-  max-width: 960px;
-  margin: 0 auto;
-  background-color: #eee;
-  border-top: 1px solid #333;
-  clear: both;
-}
-.piedDePage h2 {
+.footer {
+  background-color: black;
   margin: 0;
-  pdding: 10px;
-  font-size: 1em;
+  padding: 0;
+}
+.footer__haut {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+@media only screen and (min-width: 600px) {
+  .footer .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.footer__navMenu a {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  font-weight: bold;
+}
+.footer__navMenu li {
+  margin-top: 2em;
+}
+.footer__sociaux {
+  margin: 2em 1.5em 3em;
+}
+.footer__sociaux img {
+  max-width: 40px;
+  margin: 0 1em;
+}
+.footer__sociaux a {
+  text-decoration: none;
+}
+.footer__bas {
+  padding: 2em 0;
+  background-color: #ECECEC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__bas img {
+  width: 185px;
+  margin-bottom: 0.5em;
+}
+.footer__basCopyright {
+  margin-top: 3em;
 }
 
 /** Navigation **/
-.navigation {
-  max-width: 960px;
-  margin: 0 auto;
-  border-bottom: 1px solid #333;
-}
-.navigation ul {
-  list-style: none;
-  margin: 10px 0 10px 10px;
-  padding: 0;
-}
-.navigation li {
-  display: inline-block;
-  margin-right: 2px;
-}
-
-.navigation_secondaire {
-  max-width: 960px;
-  margin: 0 auto;
-}
-.navigation_secondaire ul {
-  list-style: none;
-  margin: 10px 0 10px 10px;
-  padding: 0;
-}
-.navigation_secondaire li {
-  display: inline-block;
-  margin-right: 2px;
-}
-
 /** Navigation **/
-.article {
-  border-bottom: 1px dotted #333;
-  padding-right: 8px;
-  margin-bottom: 10px;
-}
-.article__entete {
-  background-color: #eee;
-}
-
 /** gds - Styles généraux du Guide de styles **/
 /**
-* @author Yves Hélie - yves.helie@cegep-ste-foy.qc.ca
-* @todo Utiliser le mixin fontSize pour définir les tailles de polices
+* @author David Laberge
 */
-.gds {
-  margin: 5em auto;
-  max-width: 800px;
-}
-.gds__titre {
-  font-size: 60px;
-  font-size: 6rem;
-  color: black;
-}
-.gds__sousTitre {
-  color: white;
-  background-color: darkgray;
-  font-size: 30px;
-  font-size: 3rem;
-  padding: 1rem;
-  text-align: left;
-}
-.gds__categorie {
-  border-bottom: 1px solid lightgray;
-}
-
 /** palette - Palette de couleurs **/
 /**
-* @author Prenom Nom courriel
-* @todo Compléter selon l'énoncé de l'exercice
-* @todo Utiliser le sélecteur & pour les sélecteurs des différentes couleurs
+* @author David Laberge
 */
-.palette {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  list-style-type: none;
-  padding: 0;
-}
-.palette__item {
-  flex: 1 1 100%;
-  text-align: center;
-  margin-right: 2em;
-}
-.palette__item:last-child {
-  margin-right: 0;
-}
-.palette__couleur {
-  padding-top: 70%;
-  /* Complétez ici pour chacune des variations de couleurs
-   * (Ex. .palette__couleur--bleuMoyen)
-   * Utilisez & pour composer vos sélecteurs CSS selon l'approche BEM
-   */
-}
-.palette__couleur--bleuMoyen {
-  background-color: #358ae0;
-}
-.palette__couleur--bleuMoyen-alpha75 {
-  background-color: rgba(53, 138, 224, 0.25);
-}
-.palette__couleur--bleuMoyen-alpha50 {
-  background-color: rgba(53, 138, 224, 0.5);
-}
-.palette__couleur--bleuPale {
-  background-color: #68a8e8;
-}
-.palette__couleur--vertLime {
-  background-color: #bbd531;
-}
-.palette__couleur--vertLime-alpha75 {
-  background-color: rgba(187, 213, 49, 0.25);
-}
-.palette__couleur--vertLime-alpha50 {
-  background-color: rgba(187, 213, 49, 0.5);
-}
-.palette__couleur--bleuMinuit {
-  background-color: #012d61;
-}
-.palette__couleur--bleuMarin {
-  background-color: #2678B5;
-}
-.palette__details {
-  font-size: 0.75em;
-}
-
 /** listeInteractivite - Éléments interactifs **/
 /**
-* @author Yves Hélie - yves.helie@cegep-ste-foy.qc.ca
+* @author David Laberge
 */
-.listeInteractivite {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  list-style-type: none;
-  padding: 0;
-}
-.listeInteractivite__item {
-  flex: 1 1 100%;
-}
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,258 @@
+.acc {
+  &__descProgramme {
+    margin: 0 5%;
+    z-index: 999;
+  }
+  &__descProgramme button {
+    margin: 2.5em 0 5em 0;
+  }
+  @media only screen and (min-width: 600px) {
+    &__descProgramme {
+      display: flex;
+      flex-direction: row;
+    }
+    &__descProgrammeContainer {
+      max-width: 60%;
+      margin: 1em 0;
+      position: relative;
+    }
+    &__descProgrammeTexte {
+      max-width: 85%;
+      margin-top: 4em;
+    }
+    &__descProgramme button {
+      margin: 3.5em 0 0 5em;
+      max-height: 60px;
+      width: 300px;
+    }
+  }
+  &__vagueRealisations {
+    margin-top: -4em;
+  }
+  @media only screen and (min-width: 600px) {
+    &__vagueRealisations {
+      margin-bottom: -4em;
+    }
+  }
+  &__realisations {
+    background-color: #377CAF;
+    margin-top: -40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__realiGallerie {
+    display: flex;
+    flex-direction: column; /* À changer avec le caroussel */
+    align-items: center;
+    padding-top: 2em;
+  }
+  @media only screen and (min-width: 600px) {
+    &__realiGallerie {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 0 5% 3em;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      background-color: #ECECEC;
+      border-radius: 7px;
+    }
+    &__realiGallerie div:nth-child(5) {
+      margin: 0 0.7em 0 0;
+    }
+    &__realiGallerie div:nth-child(4) {
+      margin: 0 1em 0 0.8em;
+    }
+  }
+  &__realiTitre {
+    color: white;
+  }
+  &__realiFiche {
+    border-radius: 7px;
+    width: 291px;
+    height: 168px;
+    margin: 1.5em 0;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  &__realiFicheFond {
+    background-color: black;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    opacity: 55%;
+    height: 77px;
+    width: inherit;
+    position: absolute;
+  }
+  &__realiFicheEtiquette > * {
+    color: white;
+    margin-left: 2em;
+  }
+  &__realiFicheEtiquetteTitre {
+    margin-top: 2em;
+  }
+  &__realiFicheEtiquetteConcepteur {
+    margin-top: -1em;
+  }
+  &__realiFicheEtiquette {
+    z-index: 99;
+  }
+  &__realiGallerie button{
+    margin: 1.5em 0 3em;
+  }
+  &__temoignages {
+    background-color: #F6F6F6;
+    padding: 1.5em 0;
+  }
+  &__temoiTitre {
+    margin: 1em 0 2em 20%;
+  }
+  &__temoiContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @media only screen and (max-width: 600px) {
+    &__temoiFiche {
+      margin: 0 5% 0;
+      background-color: #FFFFFF;
+      border: 3px solid #498EC1;
+      border-radius: 8px;
+      margin-bottom: 3em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    &__temoignages {
+      display: flex;
+      flex-direction: column;
+    }
+    &__temoiFiche {
+      max-width: 1000px;
+      display: flex;
+      flex-direction: row;
+      align-self: center;
+      margin: 0 5% 0;
+      background-color: #FFFFFF;
+      border: 3px solid #498EC1;
+      border-radius: 8px;
+      margin-bottom: 3em;
+    }
+    &__temoiContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: normal;
+      align-items: normal;
+    }
+    &__temoiPhoto {
+      height: 168px;
+      margin-left: 7%;
+    }
+    &__temoiNomTemoin {
+      margin: 2em 0 1em 5%;
+    }
+    &__temoiEtiquettes {
+      display: flex;
+      flex-direction: row;
+    }
+    &__temoiEtiquettes > * {
+      min-width: 184px;
+      margin-left: 2.3em;
+      max-height: 60px;
+    }
+  }
+  &__temoiTexteDesc {
+    margin: 1em 2em 2.5em;
+  }
+  &__temoiPhoto {
+    border-radius: 50%;
+    margin-top: 2em;
+    border: 4px solid #498EC1;
+  }
+  &__temoiEtiquettesAnnee {
+    background-color: #FF9C9C;
+    border: 3px solid #CD7474;
+    padding: 0 0.2em;
+  }
+  &__temoiEtiquettePoste {
+    background-color: #FF9C9C;
+    border: 3px solid #CD7474;
+    padding: 0 0.2em;
+  }
+  &__temoiEtiquettesPosteTexte {
+    font-size: 0.8em
+  }
+  &__temoiEtiquettePoste, &__temoiEtiquettesAnnee {
+    max-width: 260px;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  &__plusDInfoTitre {
+    margin-top: 2em;
+  }
+  &__plusFiche {
+    margin: 0 5%;
+    border: 3px solid #F78888;
+    border-radius: 7px;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__plusFicheZoneTitre {
+    background-color: #F78888;
+    width: 100%;
+    text-align: center;
+  }
+  &__plusFicheTexte {
+    margin: 1em 1.5em 4em;
+  }
+  &__plusFiche button {
+    margin-bottom: 1.5em;
+  }
+  @media only screen and (min-width: 600px) {
+    &__plusDInfoContainer {
+      display: flex;
+      justify-content: center;
+    }
+    &__plusFiches {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-left: -2em;
+    }
+    &__plusFiche {
+      margin: 0 0 2em 2em;
+      max-width: 306px;
+      min-width: 306px;
+      height: 350px;
+    }
+    &__plusFiche:nth-child(3) {
+      margin-top: 12em;
+    }
+    &__plusFiche:nth-child(2) {
+      margin-top: 6em;
+    }
+  }
+  &__zoneInscription {
+    background-image: url('./../images/image_inscription.png');
+    //background-repeat: no-repeat;
+    width: 100%;
+    height: 333px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.containerBoutonInscription {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: center;
+}

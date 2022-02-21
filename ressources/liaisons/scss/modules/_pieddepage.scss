@@ -1,12 +1,50 @@
-.piedDePage {
-  max-width: 960px;
-  margin: 0 auto;
-  background-color: #eee;
-  border-top: 1px solid #333;
-  clear: both;
-  h2 {
-    margin: 0;
-    pdding: 10px;
-    font-size: 1em;
+.footer {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  &__haut {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  @media only screen and (min-width: 600px) {
+    .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+  &__navMenu a {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  &__navMenu li {
+    margin-top: 2em;
+  }
+  &__sociaux {
+    margin: 2em 1.5em 3em;
+  }
+  &__sociaux img {
+    max-width: 40px;
+    margin: 0 1em;
+  }
+  &__sociaux a{
+    text-decoration: none;
+  }
+  &__bas {
+    padding: 2em 0;
+    background-color: #ECECEC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__bas img{
+    width: 185px;
+    margin-bottom: .5em
+  }
+  &__basCopyright {
+    margin-top: 3em;
   }
 }

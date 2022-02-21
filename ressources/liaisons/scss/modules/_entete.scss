@@ -1,14 +1,30 @@
 .entete {
-  max-width: 960px;
+  max-width: 100%;
   margin: 0 auto;
-  background-color: #eee;
-  border-bottom: 1px solid #323;
-  &__titre {
-    margin: 0;
-    padding: 10px;
+  background-color: #000000;
+  ul {
+    max-width: 1000px;
+    margin: 0 auto 1em;
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-between;
   }
-  &__slogan {
-    margin: 0;
-    padding: 10px;
+  img {
+    width: 100%;
+    display: flex;
+    align-self: flex-end;
   }
+  &__mobile { /* Afficher le logo dans la barre supérieure en mobile */
+    display: none;
+  }
+}
+
+.menu {
+  margin-top: 0;
+  padding: 0;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
 }

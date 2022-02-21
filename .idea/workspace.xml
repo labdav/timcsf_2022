@@ -5,7 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0df46c7c-8ebd-4482-a4ab-10b5687a8597" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wp-content/themes/timcsf_2022/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/wp-content/themes/timcsf_2022/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/wp-content/themes/timcsf_2022/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/wp-content/themes/timcsf_2022/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wp-content/themes/timcsf_2022/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/wp-content/themes/timcsf_2022/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wp-content/themes/timcsf_2022/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/wp-content/themes/timcsf_2022/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wp-content/themes/timcsf_2022/liaisons/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/wp-content/themes/timcsf_2022/liaisons/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wp-content/themes/timcsf_2022/liaisons/css/styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/wp-content/themes/timcsf_2022/liaisons/css/styles.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wp-content/themes/timcsf_2022/page-contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/wp-content/themes/timcsf_2022/page-contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wp-content/uploads/2022/02/res1_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/wp-content/uploads/2022/02/res1_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wp-content/uploads/2022/02/res2_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/wp-content/uploads/2022/02/res2_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wp-content/uploads/2022/02/res3_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/wp-content/uploads/2022/02/res3_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wp-content/uploads/2022/02/res4_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/wp-content/uploads/2022/02/res4_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/liaisons/scss/base/_bouton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/liaisons/scss/base/_bouton.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/liaisons/scss/base/_hyperlien.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/liaisons/scss/base/_hyperlien.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/liaisons/scss/base/_typo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/liaisons/scss/base/_typo.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/liaisons/scss/layout/_general.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/liaisons/scss/layout/_general.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/liaisons/scss/modules/_article.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/liaisons/scss/modules/_article.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/liaisons/scss/modules/_entete.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/liaisons/scss/modules/_entete.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/liaisons/scss/modules/_gds.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/liaisons/scss/modules/_gds.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/liaisons/scss/modules/_listeInteractivite.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/liaisons/scss/modules/_listeInteractivite.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/liaisons/scss/modules/_navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/liaisons/scss/modules/_navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/liaisons/scss/modules/_palette.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/liaisons/scss/modules/_palette.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/liaisons/scss/modules/_pieddepage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/liaisons/scss/modules/_pieddepage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/liaisons/scss/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/liaisons/scss/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/liaisons/scss/utilitaires/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/liaisons/scss/utilitaires/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/liaisons/scss/utilitaires/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/liaisons/scss/utilitaires/_variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +93,8 @@
       <updated>1643685260640</updated>
       <workItem from="1643685264451" duration="625000" />
       <workItem from="1643685978101" duration="16298000" />
+      <workItem from="1644330481047" duration="24489000" />
+      <workItem from="1644947943962" duration="48973000" />
     </task>
     <servers />
   </component>
