@@ -42,6 +42,9 @@
     justify-content: center;
     align-items: center;
   }
+  &__realisations a {
+    text-decoration: none;
+  }
   &__realiGallerie {
     display: flex;
     flex-direction: column; /* À changer avec le caroussel */
@@ -59,10 +62,10 @@
       background-color: #ECECEC;
       border-radius: 7px;
     }
-    &__realiGallerie div:nth-child(5) {
+    &__realiGallerie a:nth-child(5) {
       margin: 0 0.7em 0 0;
     }
-    &__realiGallerie div:nth-child(4) {
+    &__realiGallerie a:nth-child(4) {
       margin: 0 1em 0 0.8em;
     }
   }
@@ -108,7 +111,7 @@
     padding: 1.5em 0;
   }
   &__temoiTitre {
-    margin: 1em 0 2em 20%;
+    margin: 1em 0 2em 12%;
   }
   &__temoiContainer {
     display: flex;
@@ -186,10 +189,12 @@
     padding: 0 0.2em;
   }
   &__temoiEtiquettesPosteTexte {
-    font-size: 0.8em
+    font-size: 0.8em;
+    align-self: center;
+    justify-self: center;
   }
   &__temoiEtiquettePoste, &__temoiEtiquettesAnnee {
-    max-width: 260px;
+    max-width: 280px;
     text-align: center;
     margin-bottom: 1em;
   }
@@ -216,6 +221,30 @@
   &__plusFiche button {
     margin-bottom: 1.5em;
   }
+
+  &__bourseEtInscription p, &__bourseEtInscription button {
+    margin: 1em 9%;
+  }
+  &__bourseEtInscription h2 {
+    margin: 1.2em 1.4em 0;
+  }
+  &__infoBourse {
+    background-color: #13588B;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  &__infoInscription {
+    background-color: #ECECEC;
+    color: #13588B;
+    display: flex;
+    flex-direction: column;
+  }
+  &__infoBourseBouton, &__infoInscriptionBouton {
+    width: 300px;
+    color: black;
+    margin-bottom: 3em;
+  }
   @media only screen and (min-width: 600px) {
     &__plusDInfoContainer {
       display: flex;
@@ -239,20 +268,33 @@
     &__plusFiche:nth-child(2) {
       margin-top: 6em;
     }
+    &__plusFiche:nth-child(2) button {
+      margin-top: -3em;
+    }
+    &__bourseEtInscription {
+      display: flex;
+      flex-direction: row;
+    }
+    &__infoBourse {
+      width: 50%;
+      background-color: #13588B;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    &__infoInscription {
+      background-color: #ECECEC;
+      color: #13588B;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+    &__bourseEtInscription p, &__bourseEtInscription button {
+      margin: 0 3em 1em;
+    }
+    &__bourseEtInscription h2 {
+      margin: 1em 2.2em;
+    }
   }
-  &__zoneInscription {
-    background-image: url('./../images/image_inscription.png');
-    //background-repeat: no-repeat;
-    width: 100%;
-    height: 333px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-.containerBoutonInscription {
-  margin-top: 1.5em;
-  display: flex;
-  justify-content: center;
 }

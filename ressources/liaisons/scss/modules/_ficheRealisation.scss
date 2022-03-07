@@ -1,0 +1,91 @@
+.ficheProj {
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: 600px) {
+    &__container{
+      background-color: #377CAF;
+      margin-bottom: 2em;
+    }
+    &__ficheContainer {
+      border-radius: 8px;
+      background-color: white;
+      max-width: 1000px;
+      margin: 3em auto auto;
+    }
+  }
+  &__grosseImage {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  @media only screen and (min-width: 600px) {
+    &__titre {
+      margin-top: 1.2em;
+    }
+    &__ficheContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3.2em;
+    }
+    &__images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__grosseImage {
+      width: 600px;
+    }
+  }
+  &__petiteImage {
+    width: 70px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-left: 1.2em;
+  }
+  &__petitesImages {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+  }
+  &__description {
+    margin: 10% 3%;
+  }
+  &__description p {
+    margin-bottom: 2em;
+  }
+  @media only screen and (min-width: 600px) {
+    &__description {
+      margin: 7% 20%;
+    }
+  }
+  &__concepteur {
+    background-color: #13588B;
+    color: #ECECEC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media only screen and (min-width: 600px) {
+    &__concepteurContainer {
+      width: 1000px;
+      margin: auto;
+    }
+  }
+  &__concepteurPhoto {
+    margin-top: 1.5em;
+    border-radius: 50%;
+    border: 2px solid #FF9C9C;
+  }
+  &__concepteur p {
+    margin: 1em 5%;
+  }
+  &__concepteur p:last-child {
+    margin-bottom: 3em;
+  }
+  &__boutonRetourRealisations {
+    margin: 2em 0;
+    align-self: center;
+  }
+}
+.image-active {
+  border: 2px solid #FF9C9C;
+}

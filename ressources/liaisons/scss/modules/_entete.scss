@@ -2,6 +2,7 @@
   max-width: 100%;
   margin: 0 auto;
   background-color: #000000;
+  position: relative;
   ul {
     max-width: 1000px;
     margin: 0 auto 1em;
@@ -17,6 +18,65 @@
   &__mobile { /* Afficher le logo dans la barre supérieure en mobile */
     display: none;
   }
+  @media only screen and (min-width: 900px) {
+    &__logoTable {
+      display: block;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      left: 40%;
+      top: 18%;
+    }
+    &__TIM {
+      font-size: 6em;
+      border-bottom: 1px solid white;
+      padding-right: 0.7em;
+      margin: 0;
+      //position: absolute;
+    }
+    &__slogan {
+      margin-left: 60px;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    &__logoTable {
+      display: block;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      left: 30%;
+      top: 18%;
+    }
+    &__TIM {
+      font-size: 5em;
+      border-bottom: 1px solid white;
+      padding-right: 0.6em;
+      margin: 0;
+      //position: absolute;
+    }
+    &__slogan {
+      margin-left: 40px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    &__logoTable {
+      display: none;
+    }
+  }
 }
 
 .menu {
@@ -27,4 +87,9 @@
 .navigation a {
   color: white;
   text-decoration: none;
+}
+
+.navigation a:hover {
+  color: #5398CB;
+  transition: .6s;
 }

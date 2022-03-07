@@ -1,6 +1,7 @@
 <?php
 get_header();
 echo "index.php";
+
 ?>
 <main class="acc">
     <div class="acc__descProgramme">
@@ -31,14 +32,17 @@ echo "index.php";
                 while ($the_query->have_posts()) {
                     $the_query->the_post();
                     ?>
-                <?php $photo=get_field("photo"); ?>
+
+                <?php $photo=get_field("photo1"); ?>
+                <a href="./fiche-realisation?id=<?php echo get_field("id") ?>" class="acc__realiLien">
                     <div class="acc__realiFiche" style="background-image: url('<?php echo $photo["sizes"]["medium"]; ?>')">
                         <div class="acc__realiFicheFond"></div>
                         <div class="acc__realiFicheEtiquette">
                             <h4 class="acc__realiFicheEtiquetteTitre"><?php echo get_field("titre")?></h4>
-                            <p class="acc__realiFicheEtiquetteConcepteur"><?php echo get_field("diplome_id")?></p> <!-- À changer pour quelque chose de programmé qui "get" le nom de l'étudiant par ID -->
+                            <p class="acc__realiFicheEtiquetteConcepteur"><?php echo get_field("concepteur")?></p> <!-- À changer pour quelque chose de programmé qui "get" le nom de l'étudiant par ID -->
                         </div>
                     </div>
+                </a>
                 <?php }
             } ?>
             <div class="acc__realiPuces">
@@ -118,9 +122,17 @@ if ($the_query->have_posts()) {
         </div>
     </div>
 </div>
-    <div class="acc__zoneInscription">
-<!--        <img src="" class="acc__zoneInscriptionImage" alt="Image décorative d'étudiants">-->
-        <button class="boutonInscription" onclick="window.location.href='./contact'">Inscris-toi</button>
+    <div class="acc__bourseEtInscription">
+        <div class="acc__infoBourse">
+            <h2 class="acc__infoBourseTitre"><?php echo get_post(1205)->titre ?></h2>
+            <p class="acc__infoBourseTexte"><?php echo get_post(1205)->texte ?></p>
+            <button class="acc__infoBourseBouton" onclick="window.location.href='<?php echo get_post(1206)->texte ?>'"><?php echo get_post(1206)->titre ?></button>
+        </div>
+        <div class="acc__infoInscription">
+            <h2 class="acc__infoInscriptionTitre"><?php echo get_post(667)->titre ?></h2>
+            <p class="acc__infoInscriptionTexte"><?php echo get_post(667)->texte ?></p>
+            <button class="acc__infoInscriptionBouton" onclick="window.location.href='<?php echo get_post(1207)->texte ?>'"><?php echo get_post(1207)->titre ?></button>
+        </div>
     </div>
 </main>
 

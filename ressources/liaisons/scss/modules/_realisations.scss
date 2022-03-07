@@ -1,0 +1,73 @@
+.realisations {
+  &__fiches {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  @media only screen and (min-width: 600px) {
+    &__fiches {
+      width: 1000px;
+      margin: auto;
+    }
+  }
+  &__fiche {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    border: 1px solid #5DA2D5;
+    border-radius: 7px;
+    margin: 2%;
+  }
+   &__fiche:nth-child(3n+1) {
+    display: flex;
+    flex-direction: row;
+    //height: 170px;
+    width: 95%;
+  }
+  &__ficheContenuImage {
+    width: 170px;
+    height: 170px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+  &__fiche:nth-child(3n+1) img {
+    height: 100%;
+    border-bottom-left-radius: 7px;
+    border-top-right-radius: 0px;
+  }
+  &__ficheContenuVignetteContainer {
+    position: absolute;
+    background-color: #5DA2D5;
+    width: 124px;
+    height: 28px;
+    margin-top: 1em;
+    text-align: center;
+  }
+  &__ficheContenuDroite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+  }
+  &__ficheContenuCours {
+    font-size: 12px;
+    margin-bottom: 1em;
+  }
+  &__ficheContenuTitre {
+    font-size: 20px;
+    color: #13588B;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  &__ficheContenuConcepteur {
+    font-size: 16px;
+    margin-top: 7px;
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    text-align: center;
+  }
+  &__voirPlus {
+    margin: 1em 0 3em 20%;
+  }
+}

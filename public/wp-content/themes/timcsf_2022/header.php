@@ -1,6 +1,10 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>
         <?php bloginfo('name');
         if (is_home() || is_front_page()) { ?>
@@ -26,6 +30,10 @@
             <?php wp_nav_menu(array('theme_location' => 'principal'));?>
         </nav>
     <?php } ?>
+    <div class="entete__logoTable">
+        <p class="entete__TIM">TIM</p>
+        <p class="entete__slogan">Web et apps</p>
+    </div>
     <img class="entete__imageHero" alt="Image héro du site" src="<?php echo get_template_directory_uri();?>/liaisons/images/image_banniere.png">
 
 </header>
