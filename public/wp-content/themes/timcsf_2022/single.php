@@ -1,5 +1,4 @@
-<?php get_header();
-echo "single.php";?>
+<?php get_header(); ?>
 
 <main class="page">
     <?php the_post();?>

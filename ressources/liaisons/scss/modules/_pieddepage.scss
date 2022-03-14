@@ -47,4 +47,13 @@
   &__basCopyright {
     margin-top: 3em;
   }
+  a:hover {
+    color: #5398CB;
+    transition: .6s;
+  }
+  &__sociaux img:hover{
+    transition: .6s;
+    transform: scale(1.3);
+    transform: rotate(25);
+  }
 }

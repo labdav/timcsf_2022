@@ -1,20 +1,4 @@
 <?php
-    if (function_exists('register_sidebar')){
-        $args = array(
-            'name'=>__('Ma barre latérale', 'theme_text_domain'),
-            'id'=> 'unique-sidebar-id',
-            'description'=>'Barre latérale de navigation',
-            'class'=>'',
-            'before_widget'=>'<li id="%1$s" class="widget %2$s">',
-            'after_widget'=>'</li>',
-            'before_title'=>'<h2 class="widgettitle">',
-            'after_title'=>'</h2>'
-        );
-        register_sidebar($args);
-    }
-    ?>
-
-<?php
 
 if (function_exists('register_nav_menus')) {
     register_nav_menus(
@@ -319,4 +303,71 @@ function tim_plusdinfo_custom_post() {
 
 add_action( 'init', 'tim_plusdinfo_custom_post', 0 );
 
+?>
+
+<?php
+function tim_images_custom_post() {
+
+    $labels = array(
+
+        'name'                => _x( 'Les modules images', 'Post Type General Name'),
+
+        'singular_name'       => _x( 'images', 'Post Type Singular Name'),
+
+        'menu_name'           => __( 'images'),
+
+        'all_items'           => __( 'images'),
+        'view_item'           => __( 'images'),
+        'add_new_item'        => __( 'Ajouter une nouvelle image'),
+        'add_new'             => __( 'Ajouter'),
+        'edit_item'           => __( 'Editer une image'),
+        'update_item'         => __( 'Modifier une image'),
+        'search_items'        => __( 'Rechercher une image'),
+        'not_found'           => __( 'Non trouvé'),
+        'not_found_in_trash'  => __( 'Non trouvé dans la corbeille'),
+    );
+
+
+    $args = array(
+        'label'               => __( 'Les images'),
+        'description'         => __( 'Tous sur les images'),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'thumbnail'),
+        'hierarchical'        => false,
+        'public'              => true,
+        'has_archive'         => true,
+        'rewrite'			  => array( 'slug' => 'images'),
+    );
+
+
+    register_post_type( 'images', $args );
+}
+
+add_action( 'init', 'tim_images_custom_post', 0 );
+
+?>
+
+<?php ////////////////////////////////////////////////////////////////////////////////////
+//à copier dans le fichier functions.php
+//Ce filtre retire les formats d'images que l'on ne veut pas utiliser
+add_filter( 'intermediate_image_sizes_advanced', 'prefix_remove_default_images' );
+function prefix_remove_default_images( $sizes ) {
+//    unset( $sizes['thumbnail']); // 150px
+//    unset( $sizes['medium']); // 300px
+//    unset( $sizes['large']); // 1024px
+    unset( $sizes['medium_large']); // 768px
+    unset( $sizes['1536x1536'] );
+    unset( $sizes['2048x2048'] );
+    return $sizes;
+}
+?>
+
+<?php
+function add_file_types_to_uploads($file_types){
+    $new_filetypes = array();
+    $new_filetypes['svg'] = 'image/svg+xml';
+    $file_types = array_merge($file_types, $new_filetypes );
+    return $file_types;
+}
+add_filter('upload_mimes', 'add_file_types_to_uploads');
 ?>

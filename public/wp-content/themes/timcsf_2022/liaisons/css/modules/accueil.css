@@ -42,6 +42,9 @@
   justify-content: center;
   align-items: center;
 }
+.acc__realisations a {
+  text-decoration: none;
+}
 .acc__realiGallerie {
   display: flex;
   flex-direction: column;
@@ -60,10 +63,10 @@
     background-color: #ECECEC;
     border-radius: 7px;
   }
-  .acc__realiGallerie div:nth-child(5) {
+  .acc__realiGallerie a:nth-child(5) {
     margin: 0 0.7em 0 0;
   }
-  .acc__realiGallerie div:nth-child(4) {
+  .acc__realiGallerie a:nth-child(4) {
     margin: 0 1em 0 0.8em;
   }
 }
@@ -78,6 +81,10 @@
   display: flex;
   align-items: flex-end;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.acc__realiFiche:hover {
+  transition: 0.4s;
+  transform: scale(1.1);
 }
 .acc__realiFicheFond {
   background-color: black;
@@ -102,14 +109,14 @@
   z-index: 99;
 }
 .acc__realiGallerie button {
-  margin: 1.5em 0 3em;
+  margin: 1.5em 50%;
 }
 .acc__temoignages {
   background-color: #F6F6F6;
   padding: 1.5em 0;
 }
 .acc__temoiTitre {
-  margin: 1em 0 2em 20%;
+  margin: 1em 0 2em 12%;
 }
 .acc__temoiContainer {
   display: flex;
@@ -188,9 +195,11 @@
 }
 .acc__temoiEtiquettesPosteTexte {
   font-size: 0.8em;
+  align-self: center;
+  justify-self: center;
 }
 .acc__temoiEtiquettePoste, .acc__temoiEtiquettesAnnee {
-  max-width: 260px;
+  max-width: 280px;
   text-align: center;
   margin-bottom: 1em;
 }
@@ -217,7 +226,30 @@
 .acc__plusFiche button {
   margin-bottom: 1.5em;
 }
-@media only screen and (min-width: 600px) {
+.acc__bourseEtInscription p, .acc__bourseEtInscription button {
+  margin: 1em 9%;
+}
+.acc__bourseEtInscription h2 {
+  margin: 1.2em 1.4em 0;
+}
+.acc__infoBourse {
+  background-color: #13588B;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.acc__infoInscription {
+  background-color: #ECECEC;
+  color: #13588B;
+  display: flex;
+  flex-direction: column;
+}
+.acc__infoBourseBouton, .acc__infoInscriptionBouton {
+  width: 300px;
+  color: black;
+  margin-bottom: 3em;
+}
+@media only screen and (min-width: 980px) {
   .acc__plusDInfoContainer {
     display: flex;
     justify-content: center;
@@ -240,20 +272,34 @@
   .acc__plusFiche:nth-child(2) {
     margin-top: 6em;
   }
-}
-.acc__zoneInscription {
-  background-image: url("./../images/image_inscription.png");
-  width: 100%;
-  height: 333px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.containerBoutonInscription {
-  margin-top: 1.5em;
-  display: flex;
-  justify-content: center;
+  .acc__plusFiche:nth-child(2) button {
+    margin-top: -3em;
+  }
+  .acc__bourseEtInscription {
+    display: flex;
+    flex-direction: row;
+  }
+  .acc__infoBourse {
+    width: 50%;
+    background-color: #13588B;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .acc__infoInscription {
+    background-color: #ECECEC;
+    color: #13588B;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .acc__bourseEtInscription p, .acc__bourseEtInscription button {
+    margin: 0 3em 1em;
+  }
+  .acc__bourseEtInscription h2 {
+    margin: 1em 2.2em;
+  }
 }
 
 /*# sourceMappingURL=accueil.css.map */

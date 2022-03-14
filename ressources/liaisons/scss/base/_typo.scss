@@ -1,3 +1,19 @@
 /**
 * @author David Laberge
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+h1 {
+  font-family: "Ubuntu", sans-serif;
+  color: #377CAF;
+  text-align: center;
+}
+h2, h3 {
+  font-family: "Ubuntu", sans-serif;
+}
+p, label, button, a {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.1rem;
+}

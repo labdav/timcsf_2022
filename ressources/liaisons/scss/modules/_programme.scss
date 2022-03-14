@@ -1,0 +1,182 @@
+.programme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media only screen and (min-width: 800px) {
+    max-width: 1000px;
+    margin: auto;
+  }
+  &__tim3Mots {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  &__grosTim {
+    font-size: 80px;
+    font-weight: bold;
+    border-right: 1px solid black;
+    margin-right: 0.2em;
+    margin-left: -0.5em;
+    padding-right: 0.2em;
+  }
+  &__2Axes1But {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__2Axes {
+    background-color: #ECECEC;
+    color: #13588B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__2axesLogo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0.5em 0;
+  }
+  &__conceptionTitre, &__integrationProgrammationTitre {
+    max-width: 150px;
+    text-align: center;
+  }
+  &__1SeulBut {
+    width: 100%;
+    background-color: #13588B;
+    color: #ECECEC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__1SeulButImgDesc {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+  }
+  &__1SeulButImg {
+    margin-right: 0.7em;
+  }
+  &__1SeulButDesc {
+    max-width: 245px;
+  }
+  &__integrationProgrammationLogo {
+    fill: #13588B;
+  }
+  &__conceptionContainer, &__integrationProgrammationContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__progIntContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  &__programmation, &__integration {
+    width: 50%;
+  }
+  &__concTraitAutresContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  &__conception {
+    width: 50%;
+  }
+  &__conceptionBouton p {
+    margin-top: 2em;
+  }
+  &__traitement, &__autre {
+    width: 25%;
+  }
+  &__programmationContenu {
+    width: 100%;
+  }
+  @media only screen and (min-width: 800px) {
+    &__profilsContainer {
+      display: flex;
+      flex-direction: row;
+    }
+    &__etudiantDUnJour {
+      display: flex;
+      flex-direction: row;
+    }
+    &__edujContenu {
+      width: 50%;
+    }
+    &__edujVignetteImage {
+      margin: 0 2em;
+    }
+  }
+  &__profilsContenuDeveloppe {
+    background-color: #ECECEC;
+    margin-top: -1.5em;
+    border: 2px solid #13588B;
+    padding: 1em;
+  }
+  &__boutonGrilleDeCours {
+    margin: 1.5em 0 1.5em 20%;
+  }
+  @media only screen and (min-width: 800px) {
+    &__boutonGrilleDeCours {
+      margin: 1.5em 0 1.5em 40%;
+    }
+  }
+  &__etudiantDUnJour {
+    margin: 2em 0;
+  }
+  @media only screen and (max-width: 800px) {
+    &__edujContenu {
+      margin: 0 1em;
+    }
+  }
+  &__edujVignette {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1em 0;
+    max-width: 600px;
+  }
+  &__edujVignetteImage {
+    width: 114px;
+    height: 114px;
+    border-radius: 50%;
+    border: 1px solid #13588B;
+  }
+  &__integrationProgrammationLogo {
+    //Test pour changer la couleur du SVG
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  &__boutonGrilleDeCours {
+    align-self: center;
+  }
+}
+
+.onglet-actif {
+  background-color: #ECECEC;
+  border: 2px solid #13588B;
+  border-bottom: none;
+  color: #13588B;
+}
+.onglet-inactif {
+  background-color: #13588B;
+  border: 2px solid #ECECEC;
+  color: #ECECEC;
+  cursor: pointer;
+}
+.onglet-actif, .onglet-inactif {
+  text-align: center;
+  padding-top: 1em;
+  text-decoration: none;
+  cursor: pointer;
+}
+.cache {
+  display: none;
+}

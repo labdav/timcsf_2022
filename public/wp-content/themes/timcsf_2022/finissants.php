@@ -3,7 +3,6 @@
 /*Template name: Finissants*/
 
 get_header();
-echo "finissants.php"; //À retirer éventuellement
 ?>
 
 <main class="finissants">

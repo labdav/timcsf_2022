@@ -30,6 +30,8 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -438,30 +440,45 @@ label {
 }
 
 .champMoyen {
-  width: 250px;
+  width: 350px;
   height: 35px;
   background-color: #FAFAFA;
   border: 1px solid #A1A1A1;
-  margin-bottom: 2em;
   border-radius: 3px;
 }
 
+label {
+  margin-top: 2em;
+}
+
 .champMessageLong {
-  width: 250px;
+  width: 350px;
   height: 165px;
   background-color: #FAFAFA;
   border: 1px solid #A1A1A1;
   border-radius: 3px;
-  margin-bottom: 2em;
 }
 
 .formSelect {
-  width: 250px;
+  width: 350px;
   height: 35px;
   background-color: #FAFAFA;
   border: 1px solid #A1A1A1;
-  margin-bottom: 2em;
   border-radius: 3px;
+}
+
+.erreur__message {
+  font-size: 12px;
+  color: red;
+  margin: 0 0 0.8em 0;
+}
+
+.erreur {
+  border: 2px solid red;
+}
+
+.contenu-cache {
+  display: none;
 }
 
 /****** BASE ******/
@@ -469,6 +486,21 @@ label {
 /**
 * @author David Laberge
 */
+h1 {
+  font-family: "Ubuntu", sans-serif;
+  color: #377CAF;
+  text-align: center;
+}
+
+h2, h3 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+p, label, button, a {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.1rem;
+}
+
 /** Hyperliens **/
 /**
 * @author Prenom Nom courriel
@@ -485,6 +517,34 @@ button {
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   font-weight: bold;
+  transition: 0.6s;
+}
+button:before {
+  opacity: 0.5;
+  filter: blur(30px);
+  transform: translateX(-100px) skewX(-15deg);
+  background: rgba(255, 255, 255, 0.5);
+}
+button:after {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100px) skewX(-15deg);
+  background: rgba(255, 255, 255, 0.5);
+}
+button:hover {
+  background: #5398CB;
+  color: white;
+  cursor: pointer;
+}
+button:hover:before {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+  transition: 0.7s;
+}
+button:hover:after {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  transition: 0.7s;
 }
 
 /****** MODULES ******/
@@ -532,6 +592,9 @@ button {
   justify-content: center;
   align-items: center;
 }
+.acc__realisations a {
+  text-decoration: none;
+}
 .acc__realiGallerie {
   display: flex;
   flex-direction: column;
@@ -550,10 +613,10 @@ button {
     background-color: #ECECEC;
     border-radius: 7px;
   }
-  .acc__realiGallerie div:nth-child(5) {
+  .acc__realiGallerie a:nth-child(5) {
     margin: 0 0.7em 0 0;
   }
-  .acc__realiGallerie div:nth-child(4) {
+  .acc__realiGallerie a:nth-child(4) {
     margin: 0 1em 0 0.8em;
   }
 }
@@ -568,6 +631,10 @@ button {
   display: flex;
   align-items: flex-end;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.acc__realiFiche:hover {
+  transition: 0.4s;
+  transform: scale(1.1);
 }
 .acc__realiFicheFond {
   background-color: black;
@@ -592,14 +659,14 @@ button {
   z-index: 99;
 }
 .acc__realiGallerie button {
-  margin: 1.5em 0 3em;
+  margin: 1.5em 50%;
 }
 .acc__temoignages {
   background-color: #F6F6F6;
   padding: 1.5em 0;
 }
 .acc__temoiTitre {
-  margin: 1em 0 2em 20%;
+  margin: 1em 0 2em 12%;
 }
 .acc__temoiContainer {
   display: flex;
@@ -678,9 +745,11 @@ button {
 }
 .acc__temoiEtiquettesPosteTexte {
   font-size: 0.8em;
+  align-self: center;
+  justify-self: center;
 }
 .acc__temoiEtiquettePoste, .acc__temoiEtiquettesAnnee {
-  max-width: 260px;
+  max-width: 280px;
   text-align: center;
   margin-bottom: 1em;
 }
@@ -707,7 +776,30 @@ button {
 .acc__plusFiche button {
   margin-bottom: 1.5em;
 }
-@media only screen and (min-width: 600px) {
+.acc__bourseEtInscription p, .acc__bourseEtInscription button {
+  margin: 1em 9%;
+}
+.acc__bourseEtInscription h2 {
+  margin: 1.2em 1.4em 0;
+}
+.acc__infoBourse {
+  background-color: #13588B;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.acc__infoInscription {
+  background-color: #ECECEC;
+  color: #13588B;
+  display: flex;
+  flex-direction: column;
+}
+.acc__infoBourseBouton, .acc__infoInscriptionBouton {
+  width: 300px;
+  color: black;
+  margin-bottom: 3em;
+}
+@media only screen and (min-width: 980px) {
   .acc__plusDInfoContainer {
     display: flex;
     justify-content: center;
@@ -730,20 +822,34 @@ button {
   .acc__plusFiche:nth-child(2) {
     margin-top: 6em;
   }
-}
-.acc__zoneInscription {
-  background-image: url("./../images/image_inscription.png");
-  width: 100%;
-  height: 333px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.containerBoutonInscription {
-  margin-top: 1.5em;
-  display: flex;
-  justify-content: center;
+  .acc__plusFiche:nth-child(2) button {
+    margin-top: -3em;
+  }
+  .acc__bourseEtInscription {
+    display: flex;
+    flex-direction: row;
+  }
+  .acc__infoBourse {
+    width: 50%;
+    background-color: #13588B;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .acc__infoInscription {
+    background-color: #ECECEC;
+    color: #13588B;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .acc__bourseEtInscription p, .acc__bourseEtInscription button {
+    margin: 0 3em 1em;
+  }
+  .acc__bourseEtInscription h2 {
+    margin: 1em 2.2em;
+  }
 }
 
 /** Page Accueil **/
@@ -755,6 +861,7 @@ button {
 .contact__fiches {
   display: flex;
   justify-content: center;
+  margin-top: 2em;
 }
 .contact__fichesResponsables {
   display: flex;
@@ -770,9 +877,6 @@ button {
   position: relative;
   margin-bottom: 3em;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.contact__ficheResponsable:last-child {
-  margin-left: -5em;
 }
 .contact__ficheResponsableEtiquette {
   color: white;
@@ -790,22 +894,27 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-bottom: 4em;
+  margin: 4em 0;
+}
+.contact__formulaireTitre {
+  margin-top: 3em;
+  margin-bottom: 0;
+}
+.contact__boutonEnvoyer {
+  margin-top: 3em;
 }
 @media only screen and (min-width: 600px) {
   .contact__formulaire {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-bottom: 4em;
   }
-}
-.contact__formContainerInputs {
-  display: flex;
-  flex-direction: column;
-}
-.contact__formContainerDestinataire {
-  display: flex;
-  flex-direction: column;
+  .contact button {
+    width: 250px;
+  }
+  .contact__ficheResponsable:last-child {
+    margin-left: -5em;
+  }
 }
 @media only screen and (min-width: 600px) {
   .contact__fichesResponsables {
@@ -822,16 +931,500 @@ button {
     border-radius: 7px;
   }
 }
+.contact__divInput {
+  display: flex;
+  flex-direction: column;
+}
 
 /** Page Finissants **/
 /** Page Réalisations **/
+.realisations__fiches {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 600px) {
+  .realisations__fiches {
+    width: 500px;
+    margin: auto;
+  }
+}
+.realisations__fiche {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  border: 1px solid #5DA2D5;
+  border-radius: 7px;
+  margin: 2%;
+}
+.realisations__fiche:hover {
+  transition: 0.4s;
+  transform: scale(1.1);
+}
+@media only screen and (min-width: 600px) {
+  .realisations__fiche {
+    width: 220px;
+  }
+}
+.realisations__fiche:nth-child(3n+1) {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+}
+.realisations__ficheContenuImage {
+  width: 170px;
+  height: 170px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+@media only screen and (min-width: 600px) {
+  .realisations__ficheContenuImage {
+    width: 100%;
+  }
+}
+.realisations__fiche:nth-child(3n+1) img {
+  height: 100%;
+  border-bottom-left-radius: 7px;
+  border-top-right-radius: 0px;
+}
+.realisations__ficheContenuVignetteContainer {
+  position: absolute;
+  background-color: #FF9C9C;
+  width: 124px;
+  height: 28px;
+  margin-top: 1em;
+  text-align: center;
+}
+.realisations__ficheContenuDroite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+.realisations__ficheContenuCours {
+  font-size: 12px;
+  margin-bottom: 1em;
+}
+.realisations__ficheContenuTitre {
+  font-size: 20px;
+  color: #13588B;
+  margin-bottom: 0;
+  text-align: center;
+}
+.realisations__ficheContenuConcepteur {
+  font-size: 16px;
+  margin-top: 7px;
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;
+  text-align: center;
+}
+.realisations__voirPlus {
+  margin: 1em 0 3em 20%;
+}
+@media only screen and (min-width: 800px) {
+  .realisations__voirPlus {
+    margin: 1em 0 3em 42%;
+  }
+}
+.realisations__boutonsPagination {
+  width: 100%;
+  margin: 2em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/** Page Réalisations **/
+.ficheProj {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 600px) {
+  .ficheProj__container {
+    background-color: #377CAF;
+    margin-bottom: 2em;
+  }
+  .ficheProj__ficheContainer {
+    border-radius: 8px;
+    background-color: white;
+    max-width: 1000px;
+    margin: 3em auto auto;
+  }
+}
+.ficheProj__grosseImage {
+  max-width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media only screen and (min-width: 600px) {
+  .ficheProj__titre {
+    margin-top: 1.2em;
+  }
+  .ficheProj__ficheContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.2em;
+  }
+  .ficheProj__images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ficheProj__grosseImage {
+    width: 600px;
+  }
+}
+.ficheProj__petiteImage {
+  width: 70px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-left: 1.2em;
+}
+.ficheProj__petitesImages {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+.ficheProj__description {
+  margin: 10% 3%;
+}
+.ficheProj__description p {
+  margin-bottom: 2em;
+}
+@media only screen and (min-width: 600px) {
+  .ficheProj__description {
+    margin: 7% 20%;
+  }
+}
+.ficheProj__concepteur {
+  background-color: #13588B;
+  color: #ECECEC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 600px) {
+  .ficheProj__concepteurContainer {
+    width: 1000px;
+    margin: auto;
+  }
+}
+.ficheProj__concepteurAPropos {
+  margin-top: -0.6em;
+  background-color: #FF9C9C;
+  border: 2px solid #CD7474;
+  color: black;
+  padding: 0.2em;
+}
+.ficheProj__concepteurPhoto {
+  margin-top: 1.5em;
+  border-radius: 50%;
+  border: 2px solid #FF9C9C;
+}
+.ficheProj__concepteur p {
+  margin: 1em 5%;
+}
+.ficheProj__concepteur p:last-child {
+  margin-bottom: 3em;
+}
+.ficheProj__boutonRetourRealisations {
+  margin: 2em 0;
+  align-self: center;
+}
+
+.image-active {
+  border: 2px solid #FF9C9C;
+}
+
 /** Page Programme **/
+.programme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media only screen and (min-width: 800px) {
+  .programme {
+    max-width: 1000px;
+    margin: auto;
+  }
+}
+.programme__tim3Mots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.programme__grosTim {
+  font-size: 80px;
+  font-weight: bold;
+  border-right: 1px solid black;
+  margin-right: 0.2em;
+  margin-left: -0.5em;
+  padding-right: 0.2em;
+}
+.programme__2Axes1But {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.programme__2Axes {
+  background-color: #ECECEC;
+  color: #13588B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.programme__2axesLogo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0.5em 0;
+}
+.programme__conceptionTitre, .programme__integrationProgrammationTitre {
+  max-width: 150px;
+  text-align: center;
+}
+.programme__1SeulBut {
+  width: 100%;
+  background-color: #13588B;
+  color: #ECECEC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.programme__1SeulButImgDesc {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2em;
+}
+.programme__1SeulButImg {
+  margin-right: 0.7em;
+}
+.programme__1SeulButDesc {
+  max-width: 245px;
+}
+.programme__integrationProgrammationLogo {
+  fill: #13588B;
+}
+.programme__conceptionContainer, .programme__integrationProgrammationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.programme__progIntContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.programme__programmation, .programme__integration {
+  width: 50%;
+}
+.programme__concTraitAutresContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.programme__conception {
+  width: 50%;
+}
+.programme__conceptionBouton p {
+  margin-top: 2em;
+}
+.programme__traitement, .programme__autre {
+  width: 25%;
+}
+.programme__programmationContenu {
+  width: 100%;
+}
+@media only screen and (min-width: 800px) {
+  .programme__profilsContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  .programme__etudiantDUnJour {
+    display: flex;
+    flex-direction: row;
+  }
+  .programme__edujContenu {
+    width: 50%;
+  }
+  .programme__edujVignetteImage {
+    margin: 0 2em;
+  }
+}
+.programme__profilsContenuDeveloppe {
+  background-color: #ECECEC;
+  margin-top: -1.5em;
+  border: 2px solid #13588B;
+  padding: 1em;
+}
+.programme__boutonGrilleDeCours {
+  margin: 1.5em 0 1.5em 20%;
+}
+@media only screen and (min-width: 800px) {
+  .programme__boutonGrilleDeCours {
+    margin: 1.5em 0 1.5em 40%;
+  }
+}
+.programme__etudiantDUnJour {
+  margin: 2em 0;
+}
+@media only screen and (max-width: 800px) {
+  .programme__edujContenu {
+    margin: 0 1em;
+  }
+}
+.programme__edujVignette {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1em 0;
+  max-width: 600px;
+}
+.programme__edujVignetteImage {
+  width: 114px;
+  height: 114px;
+  border-radius: 50%;
+  border: 1px solid #13588B;
+}
+.programme a {
+  text-decoration: none;
+  color: inherit;
+}
+.programme__boutonGrilleDeCours {
+  align-self: center;
+}
+
+.onglet-actif {
+  background-color: #ECECEC;
+  border: 2px solid #13588B;
+  border-bottom: none;
+  color: #13588B;
+}
+
+.onglet-inactif {
+  background-color: #13588B;
+  border: 2px solid #ECECEC;
+  color: #ECECEC;
+  cursor: pointer;
+}
+
+.onglet-actif, .onglet-inactif {
+  text-align: center;
+  padding-top: 1em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cache {
+  display: none;
+}
+
 /** Page Stages **/
+.stages {
+  max-width: 100%;
+}
+@media only screen and (min-width: 800px) {
+  .stages {
+    max-width: 1000px;
+    margin: auto;
+  }
+}
+.stages__futursEtudiantsContainer {
+  background-color: #ECECEC;
+  padding: 1.4em 1.4em 3em;
+  margin-bottom: 5em;
+}
+.stages__employeursFicheFin {
+  background-color: #90CCF4;
+}
+.stages__employeursFicheATE {
+  background-color: #13588B;
+  color: white;
+  float: right;
+  margin-top: -1em;
+}
+@media only screen and (min-width: 800px) {
+  .stages__employeursFicheATE {
+    background-color: #13588B;
+    margin-top: 0;
+  }
+  .stages__employeursContainer {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.stages__employeursFicheATE, .stages__employeursFicheFin {
+  width: 274px;
+  padding: 1.2em;
+}
+@media only screen and (min-width: 800px) {
+  .stages__employeursFicheATE, .stages__employeursFicheFin {
+    width: 50%;
+  }
+}
+.stages__profilDeCompetencesImage {
+  max-width: 100%;
+}
+.stages__contactVignetteImage {
+  width: 114px;
+  height: 114px;
+  border-radius: 50%;
+  border: 1px solid #13588B;
+}
+.stages__contactVignette {
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1em 0;
+}
+.stages__profilDeCompetences {
+  position: relative;
+  width: 100%;
+}
+.stages__profilDeCompetences button {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+}
+@media only screen and (min-width: 800px) {
+  .stages__profilEtContact {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3em;
+  }
+  .stages__profilDeCompetences {
+    width: 50%;
+  }
+  .stages__contactVignette {
+    margin-left: 8%;
+  }
+  .stages__contactVignetteImage {
+    margin-right: 1em;
+  }
+  .stages__profilDeCompetences button {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+  }
+}
+.stages__2axesLogo {
+  display: flex;
+  flex-direction: row;
+}
+
 /** Entete **/
 .entete {
   max-width: 100%;
   margin: 0 auto;
   background-color: #000000;
+  position: relative;
 }
 .entete ul {
   max-width: 1000px;
@@ -849,6 +1442,72 @@ button {
   /* Afficher le logo dans la barre supérieure en mobile */
   display: none;
 }
+@media only screen and (max-width: 800px) {
+  .entete__logoMobile {
+    max-width: 70px;
+    height: 50px;
+    position: sticky;
+    left: 75px;
+    z-index: 999;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .entete__logoTable {
+    display: block;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 40%;
+    top: 18%;
+  }
+  .entete__TIM {
+    font-size: 6em;
+    border-bottom: 1px solid white;
+    padding-right: 0.7em;
+    margin: 0;
+  }
+  .entete__slogan {
+    margin-left: 60px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .entete__logoTable {
+    display: block;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 30%;
+    top: 18%;
+  }
+  .entete__TIM {
+    font-size: 5em;
+    border-bottom: 1px solid white;
+    padding-right: 0.6em;
+    margin: 0;
+  }
+  .entete__slogan {
+    margin-left: 40px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .entete__logoTable {
+    display: none;
+  }
+}
 
 .menu {
   margin-top: 0;
@@ -858,6 +1517,11 @@ button {
 .navigation a {
   color: white;
   text-decoration: none;
+}
+
+.navigation a:hover {
+  color: #5398CB;
+  transition: 0.6s;
 }
 
 /** Pied de page **/
@@ -910,6 +1574,15 @@ button {
 }
 .footer__basCopyright {
   margin-top: 3em;
+}
+.footer a:hover {
+  color: #5398CB;
+  transition: 0.6s;
+}
+.footer__sociaux img:hover {
+  transition: 0.6s;
+  transform: scale(1.3);
+  transform: rotate(25);
 }
 
 /** Navigation **/
