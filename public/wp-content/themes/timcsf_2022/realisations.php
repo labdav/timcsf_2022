@@ -2,8 +2,14 @@
 
 /*Template name: Réalisations*/
 
-get_header();
-echo "realisations.php"; //À retirer éventuellement
+get_header(); //À retirer éventuellement
+
+if(get_query_var('paged')) {
+    $paged = get_query_var('paged');
+} else{
+    $paged = 1;
+}
+
 ?>
 
     <main class="realisations">
@@ -33,6 +39,7 @@ $args = array(
     'posts_per_page' => 6,
     'post_status' => 'publish',
     'orderby' => 'rand',
+    'paged' => $paged
 );
 
 $the_query = new WP_Query($args);
@@ -46,13 +53,13 @@ if ($the_query->have_posts()) {
                 <?php
                     $coursId = intval(get_field("cours_id"));
                     if($coursId <= 9) {
-                        echo "<p class='realisations__ficheContenuVignetteContainer'>1ère Année</p>";
+                        echo "<p class='realisations__ficheContenuVignetteContainer'>1ère année</p>";
                     }
                     else if($coursId >= 9 && $coursId <= 17) {
-                        echo "<p class='realisations__ficheContenuVignetteContainer'>2e Année</p>";
+                        echo "<p class='realisations__ficheContenuVignetteContainer'>2e année</p>";
                     }
                     else {
-                        echo "<p class='realisations__ficheContenuVignetteContainer'>3e Année</p>";
+                        echo "<p class='realisations__ficheContenuVignetteContainer'>3e année</p>";
                     }
 
                 ?>
@@ -73,8 +80,14 @@ if ($the_query->have_posts()) {
         <?php
         }
 } ?>
+                <div class="realisations__boutonsPagination">
+                    <!-- ifs pour ne pas dépasser les limites des pages (1 et 13) -->
+                    <!-- Pas optimal, mais ça "fait la job" -->
+                    <a href="./?paged=<?php if ($paged > 1) { echo $paged-1;} else { echo 1;} ?>">Page précédente</a>
+                    <a href="./?paged=<?php if ($paged < 13) { echo $paged+1;} else { echo 13;} ?>">Page suivante</a>
+                </div>
             </div>
-                <button class="realisations__voirPlus">Voir plus de réalisations</button>
+
 
 
     </main>

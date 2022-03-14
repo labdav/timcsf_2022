@@ -4,7 +4,6 @@
 
 get_header();
 
-echo "page-contact.php"; //À retirer éventuellement
 ?>
 
 <?php
@@ -34,7 +33,6 @@ $the_query = new WP_Query( $args );
 
         <?php //Photo obtient un tableau (sizes) contenant les différentes tailles d'image
         $photo=get_field("photo");
-        //ici on affiche seulement la taille thumbnail
         ?>
             <br />
         <div class="contact__ficheResponsable" style="background-image: url('<?php echo $photo["sizes"]["large"]; ?>')" alt="<?php echo get_field("prenom"); ?> <?php echo get_field("nom"); ?>">
@@ -50,15 +48,20 @@ $the_query = new WP_Query( $args );
 } ?>
         </div>
      </div>
+        <?php include ("liaisons/validation_serveur.php"); ?>
         <h2 class="contact__formulaireTitre">Formulaire de contact</h2>
-        <form class="contact__formulaire" method="POST" novalidate>
+        <form class="contact__formulaire" id="form" name="form" method="POST" action="#" novalidate>
+            <div class="contact__divInput">
             <label for="responsablesSelect">Choisissez un destinataire:</label>
-            <select name="responsables" id="responsablesSelect" class="formSelect">
+            <select name="formulaire_responsables" id="responsablesSelect" class="formSelect" pattern="\b(sylvain|michel|pascal|benoît)\b">
                 <option value="sylvain">Sylvain Lamoureux</option>
                 <option value="michel">Michel Rouleau</option>
                 <option value="pascal">Pascal Larose</option>
                 <option value="benoît">Benoît Frigon</option>
             </select>
+            </div>
+
+            <div class="contact__divInput">
                 <label for="sujet">Sujet:</label>
                 <input
                         type="text"
@@ -66,8 +69,21 @@ $the_query = new WP_Query( $args );
                         name="sujet"
                         value=""
                         class="champMoyen"
+                        pattern="^[a-zA-Z0-9_-]+$"
+                        aria-describedby="erreur-sujet"
                         required>
-                <p class="erreur__message"></p>
+                    <?php if(isset($tValidation)) {
+                        if ($tValidation["sujet"]["valide"] === "faux"){ ?>
+                            <p class="erreur__message" id="erreur-sujet"><?php echo $tValidation["sujet"]["message"] ?></p>
+                        <?php } else {?>
+                            <p class="erreur__message"></p>
+                        <?php }
+                    } else { ?>
+                    <p class="erreur__message"></p>
+                    <?php }?>
+            </div>
+
+            <div class="contact__divInput">
                 <label for="nom">Nom:</label>
                 <input type="text"
                        id="nom"
@@ -75,9 +91,20 @@ $the_query = new WP_Query( $args );
                        value=""
                        class="champMoyen"
                        pattern="/[a-zA-ZÀ-ÿ -]+/"
-                       required
-                >
-                <p class="erreur__message"></p>
+                       aria-describedby="erreur-nom"
+                       required>
+                <?php if(isset($tValidation)) {
+                    if ($tValidation["nom"]["valide"] === "faux"){ ?>
+                        <p class="erreur__message" id="erreur-nom"><?php echo $tValidation["nom"]["message"] ?></p>
+                    <?php } else { ?>
+                        <p class="erreur__message"></p>
+                    <?php }
+                } else { ?>
+                    <p class="erreur__message"></p>
+                <?php }?>
+            </div>
+
+            <div class="contact__divInput">
                 <label for="courriel">Courriel:</label>
                 <input
                         type="text"
@@ -85,22 +112,53 @@ $the_query = new WP_Query( $args );
                         name="courriel"
                         value=""
                         class="champMoyen"
-                        pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
-                <p class="erreur__message">Veuillez entrer un courriel valide</p>
+                        pattern="/^[a-zA-Z0-9][a-zA-Z0-9_-]+([.][a-zA-Z0-9_-]+)*[@][a-zA-Z0-9_-]+([.][a-zA-Z0-9_-]+)*[.][a-zA-Z]{2,}$/"
+                        aria-describedby="erreur-courriel"
+                        required>
+                <?php if(isset($tValidation)) {
+                    if ($tValidation["courriel"]["valide"] === "faux"){ ?>
+                        <p class="erreur__message" id="erreur-courriel"><?php echo $tValidation["courriel"]["message"] ?></p>
+                    <?php } else {?>
+                        <p class="erreur__message"></p>
+                    <?php }
+                } else { ?>
+                    <p class="erreur__message"></p>
+                <?php }?>
+            </div>
+
+            <div class="contact__divInput">
                 <label for="message">Message:</label>
                 <textarea
                         id="message"
-                        name="message" value=""
+                        name="message"
+                        value=""
                         class="champMessageLong"
-                        required>
-                </textarea>
-                <p class="erreur__message"></p>
+                        pattern="/^[a-zA-Z0-9_.!@#$%^&*()?-]+$/"
+                        aria-describedby="erreur-messageLong"
+                        required></textarea>
+                <?php if(isset($tValidation)) {
+                    if ($tValidation["message"]["valide"] === "faux"){ ?>
+                        <p class="erreur__message" id="erreur-messageLong"><?php echo $tValidation["message"]["message"] ?></p>
+                    <?php } else {?>
+                        <p class="erreur__message"></p>
+                    <?php }
+                } else { ?>
+                    <p class="erreur__message"></p>
+                <?php }?>
+            </div>
+
                 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                 <div class="g-recaptcha" data-sitekey="6Ld2xZAUAAAAAJ2AKX2HBkO1X3vSb6vuQ4ireXAK"></div>
-                <button type="submit" class="contact__boutonEnvoyer">Envoyer</button>
+                <button type="submit" name="submit" class="contact__boutonEnvoyer">Envoyer</button>
+            <div class="messageConfirmationDiv" id="messageConfirmationDiv">
+                <?php if(isset($successEnvoi)) { ?>
+                <p class="messageConfirmation" id="messageConfirmation"><?php echo $successEnvoi ?></p>
+                <?php } ?>
+            </div>
         </form>
     </main>
-<!--    <script type="text/javascript" src="../.././public/wp-content/themes/timcsf_2022/liaisons/js/contact.js"></script>-->
+    <script type="text/javascript" src="../.././public/wp-content/themes/timcsf_2022/liaisons/js/messagesErreur.js"></script>
+    <script type="text/javascript" src="../.././public/wp-content/themes/timcsf_2022/liaisons/js/validation_formulaireContact.js"></script>
     <script>
         function choisirResponsable(nom) {
             document.getElementById("responsablesSelect").value = nom;

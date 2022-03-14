@@ -5,6 +5,7 @@
   &__fiches {
     display: flex;
     justify-content: center;
+    margin-top: 2em;
   }
   &__fichesResponsables {
     display: flex;
@@ -73,5 +74,9 @@
       border: 2px solid #377CAF;
       border-radius: 7px;
     }
+  }
+  &__divInput {
+    display: flex;
+    flex-direction: column;
   }
 }

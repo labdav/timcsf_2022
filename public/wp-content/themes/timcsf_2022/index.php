@@ -1,6 +1,5 @@
 <?php
 get_header();
-echo "index.php";
 
 ?>
 <main class="acc">
@@ -47,8 +46,7 @@ echo "index.php";
             } ?>
             <div class="acc__realiPuces">
             </div>
-            <button type="button" class="acc__realiVoirTout">Voir toutes les réalisations</button>
-
+            <button type="button" class="acc__realiVoirTout" onclick="window.location.href='./realisations'">Voir toutes les réalisations</button>
         </div>
     </div>
     <div class="acc__temoignages">

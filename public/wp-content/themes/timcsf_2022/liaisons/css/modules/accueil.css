@@ -82,6 +82,10 @@
   align-items: flex-end;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+.acc__realiFiche:hover {
+  transition: 0.4s;
+  transform: scale(1.1);
+}
 .acc__realiFicheFond {
   background-color: black;
   border-bottom-left-radius: 7px;
@@ -105,7 +109,7 @@
   z-index: 99;
 }
 .acc__realiGallerie button {
-  margin: 1.5em 0 3em;
+  margin: 1.5em 50%;
 }
 .acc__temoignages {
   background-color: #F6F6F6;
@@ -245,7 +249,7 @@
   color: black;
   margin-bottom: 3em;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 980px) {
   .acc__plusDInfoContainer {
     display: flex;
     justify-content: center;

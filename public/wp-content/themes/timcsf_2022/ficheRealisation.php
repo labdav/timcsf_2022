@@ -8,8 +8,7 @@ if(isset($_GET['id'])) {
     $idProjet = $_GET['id'];
 } else {
     $idProjet = 1;
-}
-echo "ficheRealisation.php";?>
+}?>
 
     <main class="ficheProj">
         <?php $args = array(
@@ -26,11 +25,13 @@ echo "ficheRealisation.php";?>
         <div class="ficheProj__ficheContainer">
         <h1 class="ficheProj__titre"><?php echo get_field("titre"); ?></h1>
         <h2 class="ficheProj__titreConcepteur"><?php echo get_field("concepteur"); ?></h2>
-        <?php $photoActive = 1; ?>
+        <?php
+        $photo1 = get_field("photo1")["sizes"]["large"];
+        ?>
         <div class="ficheProj__images">
-            <img class="ficheProj__grosseImage" src="<?php echo get_field("photo" . $photoActive)["sizes"]["large"]; ?>">
+            <img class="ficheProj__grosseImage" id="grosseImage" src="<?php echo $photo1 ?>">
             <div class="ficheProj__petitesImages">
-                <img class="ficheProj__petiteImage" id="petiteImage1" src="<?php echo get_field("photo1")["sizes"]["thumbnail"]; ?>">
+                <img class="ficheProj__petiteImage image-active" id="petiteImage1" src="<?php echo get_field("photo1")["sizes"]["thumbnail"]; ?>">
                 <img class="ficheProj__petiteImage" id="petiteImage2" src="<?php echo get_field("photo2")["sizes"]["thumbnail"]; ?>">
                 <?php if(isset(get_field("photo3")["sizes"]["thumbnail"])) { ?><img class="ficheProj__petiteImage" id="petiteImage3" src="<?php echo get_field("photo3")["sizes"]["medium"]; ?>"> <?php }?>
                 <?php if(isset(get_field("photo4")["sizes"]["thumbnail"])) { ?><img class="ficheProj__petiteImage" id="petiteImage4" src="<?php echo get_field("photo4")["sizes"]["medium"]; ?>"> <?php }?>
@@ -63,8 +64,8 @@ echo "ficheRealisation.php";?>
         $the_query = new WP_Query($args);
         $the_query->the_post(); ?>
         <div class="ficheProj__concepteurContainer">
-            <h2 class="ficheProj__concepteurAPropos">À propos du concepteur</h2>
             <div class="ficheProj__concepteur">
+                <h2 class="ficheProj__concepteurAPropos">À propos du concepteur</h2>
                 <?php $photo=get_field("photo"); ?>
                 <img src="<?php echo $photo["sizes"]["medium"]; ?>" alt="Photo du concepteur" class="ficheProj__concepteurPhoto">
                 <h3 class="ficheProj__concepteurNom"><?php echo get_field('prenom')?> <?php echo get_field('nom')?></h3>
@@ -73,4 +74,5 @@ echo "ficheRealisation.php";?>
         </div>
         <button class="ficheProj__boutonRetourRealisations" onclick="window.location.href='./realisations'" value="">Retour à la liste des projets</button>
     </main>
+    <script src="../.././public/wp-content/themes/timcsf_2022/liaisons/js/fiche-realisation.js"></script>
 <?php get_footer();?>

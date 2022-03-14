@@ -40,7 +40,7 @@
     }
   },
   "consentement": {
-	"label": "Autorisez-vous le partage de ce numéro?",
+    "label": "Autorisez-vous le partage de ce numéro?",
     "erreurs": {
       "vide": "Veuillez, s'il-vous-plaît, cocher la boîte pour consentir au partage de votre no cellulaire avec un.e étudiant.e qui vous accueillera lors de cette journée"
     }

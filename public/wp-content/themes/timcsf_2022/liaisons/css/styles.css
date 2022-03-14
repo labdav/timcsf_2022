@@ -473,6 +473,10 @@ label {
   margin: 0 0 0.8em 0;
 }
 
+.erreur {
+  border: 2px solid red;
+}
+
 .contenu-cache {
   display: none;
 }
@@ -628,6 +632,10 @@ button:hover:after {
   align-items: flex-end;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+.acc__realiFiche:hover {
+  transition: 0.4s;
+  transform: scale(1.1);
+}
 .acc__realiFicheFond {
   background-color: black;
   border-bottom-left-radius: 7px;
@@ -651,7 +659,7 @@ button:hover:after {
   z-index: 99;
 }
 .acc__realiGallerie button {
-  margin: 1.5em 0 3em;
+  margin: 1.5em 50%;
 }
 .acc__temoignages {
   background-color: #F6F6F6;
@@ -791,7 +799,7 @@ button:hover:after {
   color: black;
   margin-bottom: 3em;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 980px) {
   .acc__plusDInfoContainer {
     display: flex;
     justify-content: center;
@@ -853,6 +861,7 @@ button:hover:after {
 .contact__fiches {
   display: flex;
   justify-content: center;
+  margin-top: 2em;
 }
 .contact__fichesResponsables {
   display: flex;
@@ -922,6 +931,10 @@ button:hover:after {
     border-radius: 7px;
   }
 }
+.contact__divInput {
+  display: flex;
+  flex-direction: column;
+}
 
 /** Page Finissants **/
 /** Page Réalisations **/
@@ -933,7 +946,7 @@ button:hover:after {
 }
 @media only screen and (min-width: 600px) {
   .realisations__fiches {
-    width: 1000px;
+    width: 500px;
     margin: auto;
   }
 }
@@ -944,6 +957,15 @@ button:hover:after {
   border: 1px solid #5DA2D5;
   border-radius: 7px;
   margin: 2%;
+}
+.realisations__fiche:hover {
+  transition: 0.4s;
+  transform: scale(1.1);
+}
+@media only screen and (min-width: 600px) {
+  .realisations__fiche {
+    width: 220px;
+  }
 }
 .realisations__fiche:nth-child(3n+1) {
   display: flex;
@@ -956,6 +978,11 @@ button:hover:after {
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
 }
+@media only screen and (min-width: 600px) {
+  .realisations__ficheContenuImage {
+    width: 100%;
+  }
+}
 .realisations__fiche:nth-child(3n+1) img {
   height: 100%;
   border-bottom-left-radius: 7px;
@@ -963,7 +990,7 @@ button:hover:after {
 }
 .realisations__ficheContenuVignetteContainer {
   position: absolute;
-  background-color: #5DA2D5;
+  background-color: #FF9C9C;
   width: 124px;
   height: 28px;
   margin-top: 1em;
@@ -995,6 +1022,19 @@ button:hover:after {
 .realisations__voirPlus {
   margin: 1em 0 3em 20%;
 }
+@media only screen and (min-width: 800px) {
+  .realisations__voirPlus {
+    margin: 1em 0 3em 42%;
+  }
+}
+.realisations__boutonsPagination {
+  width: 100%;
+  margin: 2em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 
 /** Page Réalisations **/
 .ficheProj {
@@ -1014,7 +1054,7 @@ button:hover:after {
   }
 }
 .ficheProj__grosseImage {
-  width: 100%;
+  max-width: 100%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 @media only screen and (min-width: 600px) {
@@ -1045,6 +1085,7 @@ button:hover:after {
   margin-top: 1em;
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 }
 .ficheProj__description {
   margin: 10% 3%;
@@ -1069,6 +1110,13 @@ button:hover:after {
     width: 1000px;
     margin: auto;
   }
+}
+.ficheProj__concepteurAPropos {
+  margin-top: -0.6em;
+  background-color: #FF9C9C;
+  border: 2px solid #CD7474;
+  color: black;
+  padding: 0.2em;
 }
 .ficheProj__concepteurPhoto {
   margin-top: 1.5em;
@@ -1182,6 +1230,9 @@ button:hover:after {
 .programme__conception {
   width: 50%;
 }
+.programme__conceptionBouton p {
+  margin-top: 2em;
+}
 .programme__traitement, .programme__autre {
   width: 25%;
 }
@@ -1210,6 +1261,22 @@ button:hover:after {
   border: 2px solid #13588B;
   padding: 1em;
 }
+.programme__boutonGrilleDeCours {
+  margin: 1.5em 0 1.5em 20%;
+}
+@media only screen and (min-width: 800px) {
+  .programme__boutonGrilleDeCours {
+    margin: 1.5em 0 1.5em 40%;
+  }
+}
+.programme__etudiantDUnJour {
+  margin: 2em 0;
+}
+@media only screen and (max-width: 800px) {
+  .programme__edujContenu {
+    margin: 0 1em;
+  }
+}
 .programme__edujVignette {
   display: flex;
   flex-direction: row;
@@ -1237,10 +1304,6 @@ button:hover:after {
   border: 2px solid #13588B;
   border-bottom: none;
   color: #13588B;
-}
-
-.onglet-actif img {
-  fill: red;
 }
 
 .onglet-inactif {
@@ -1378,6 +1441,15 @@ button:hover:after {
 .entete__mobile {
   /* Afficher le logo dans la barre supérieure en mobile */
   display: none;
+}
+@media only screen and (max-width: 800px) {
+  .entete__logoMobile {
+    max-width: 70px;
+    height: 50px;
+    position: sticky;
+    left: 75px;
+    z-index: 999;
+  }
 }
 @media only screen and (min-width: 900px) {
   .entete__logoTable {

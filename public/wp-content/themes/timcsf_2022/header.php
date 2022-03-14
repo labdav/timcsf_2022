@@ -14,6 +14,9 @@
         }?>
     </title>
     <meta charset="<?php bloginfo('charset');?>"/>
+    <meta name="description" content="Site web réalisé dans le cadre de l'épreuve synthèse des Techniques d'intégration multimédias du Cégep de Sainte-Foy.">
+    <meta name="keywords" content="TIM, multimedias, intégration, technique">
+    <meta name="author" content="David Laberge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/liaisons/css/styles.css"/>
     <?php wp_head(); ?>
@@ -34,6 +37,7 @@
         <p class="entete__TIM">TIM</p>
         <p class="entete__slogan">Web et apps</p>
     </div>
-    <img class="entete__imageHero" alt="Image héro du site" src="<?php echo get_template_directory_uri();?>/liaisons/images/image_banniere.png">
+<!--    <img class="entete__imageHero" alt="Image héro du site" src="--><?php //echo get_template_directory_uri();?><!--/liaisons/images/image_banniere.png">-->
+    <img class="entete__imageHero" alt="Image héro du site" src="http://localhost:8888/rpni4/timcsf_2022/public/wp-content/uploads/2022/03/image_banniere.png">
 
 </header>

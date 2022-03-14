@@ -23,11 +23,11 @@ button {
     transform: translateX(-100px) skewX(-15deg);
     background: rgba(255,255,255,0.5);
   }
-  &:hover{
+  &:hover {
     background: #5398CB;
     color: white;
     cursor: pointer;
-    &:before{
+    &:before {
       transform: translateX(300px)  skewX(-15deg);
       opacity: 0.6;
       transition: .7s;

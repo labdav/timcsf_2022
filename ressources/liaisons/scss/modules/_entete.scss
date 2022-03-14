@@ -18,6 +18,15 @@
   &__mobile { /* Afficher le logo dans la barre supérieure en mobile */
     display: none;
   }
+  @media only screen and (max-width: 800px) {
+    &__logoMobile {
+      max-width: 70px;
+      height: 50px;
+      position: sticky;
+      left: 75px;
+      z-index: 999;
+    }
+  }
   @media only screen and (min-width: 900px) {
     &__logoTable {
       display: block;

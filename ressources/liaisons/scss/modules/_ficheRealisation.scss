@@ -14,7 +14,7 @@
     }
   }
   &__grosseImage {
-    width: 100%;
+    max-width: 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   @media only screen and (min-width: 600px) {
@@ -45,6 +45,7 @@
     margin-top: 1em;
     display: flex;
     flex-direction: row;
+    cursor: pointer;
   }
   &__description {
     margin: 10% 3%;
@@ -69,6 +70,13 @@
       width: 1000px;
       margin: auto;
     }
+  }
+  &__concepteurAPropos {
+    margin-top: -0.6em;
+    background-color: #FF9C9C;
+    border: 2px solid #CD7474;
+    color: black;
+    padding: 0.2em;
   }
   &__concepteurPhoto {
     margin-top: 1.5em;

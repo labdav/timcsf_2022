@@ -1,6 +1,5 @@
 <?php
 get_header();
-echo "page.php";
 ?>
 
 <main class="page">

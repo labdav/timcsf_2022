@@ -81,6 +81,10 @@
     align-items: flex-end;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
+  &__realiFiche:hover {
+    transition: .4s;
+    transform: scale(1.1);
+  }
   &__realiFicheFond {
     background-color: black;
     border-bottom-left-radius: 7px;
@@ -104,7 +108,7 @@
     z-index: 99;
   }
   &__realiGallerie button{
-    margin: 1.5em 0 3em;
+    margin: 1.5em 50%;
   }
   &__temoignages {
     background-color: #F6F6F6;
@@ -245,7 +249,7 @@
     color: black;
     margin-bottom: 3em;
   }
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 980px) {
     &__plusDInfoContainer {
       display: flex;
       justify-content: center;

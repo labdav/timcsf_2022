@@ -16,7 +16,7 @@
             <a href="<?php echo get_post(674)->texte ?>" class="footer__sociauxLien">
                 <img class="footer_sociauxIcon" alt="Logo de Linkedin" src="<?php echo get_template_directory_uri();?>/liaisons/images/linkedin.svg">
             </a>
-            <a href="http://instagram.com" class="footer__sociauxLien">
+            <a href="<?php echo get_post(694)->texte ?>" class="footer__sociauxLien">
                 <img class="footer_sociauxIcon" alt="Logo d'Instagram" src="<?php echo get_template_directory_uri();?>/liaisons/images/instagram.svg">
             </a>
         </div>

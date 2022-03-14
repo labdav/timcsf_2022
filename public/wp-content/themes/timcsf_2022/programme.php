@@ -3,7 +3,6 @@
 /*Template name: Programme*/
 
 get_header();
-echo "programme.php"; //À retirer éventuellement
 ?>
 
 <main class="programme">
@@ -48,7 +47,6 @@ echo "programme.php"; //À retirer éventuellement
                 <div class="programme__programmationBoutonDiv">
                     <img src="<?php echo get_template_directory_uri();?>/liaisons/images/programmation.svg" class="programme__programmationBoutonIcone" alt="Bouton du profil programmation">
                     <p class="programme__programmationBoutonTitre"><?php echo get_post(680)->titre ?></p>
-                    <p class="programme__programmationBoutonPct"></p>
                 </div>
             </div>
 
@@ -56,7 +54,6 @@ echo "programme.php"; //À retirer éventuellement
                 <div class="programme__integrationBouton">
                     <img src="<?php echo get_template_directory_uri();?>/liaisons/images/integration.svg" class="programme__integrationBoutonIcone" alt="Bouton du profil intégration">
                     <p class="programme__integrationBoutonTitre"><?php echo get_post(679)->titre ?></p>
-                    <p class="programme__integrationBoutonPct"></p>
                 </div>
             </div>
             </div>
@@ -66,7 +63,6 @@ echo "programme.php"; //À retirer éventuellement
                 <div class="programme__conceptionBouton">
                     <img src="<?php echo get_template_directory_uri();?>/liaisons/images/conception.svg" class="programme__conceptionBoutonIcone" alt="Bouton du profil conception">
                     <p class="programme__conceptionBoutonTitre"><?php echo get_post(677)->titre ?></p>
-                    <p class="programme__conceptionBoutonPct"></p>
                 </div>
             </div>
 
@@ -74,7 +70,6 @@ echo "programme.php"; //À retirer éventuellement
                 <div class="programme__traitementBouton">
                     <img src="<?php echo get_template_directory_uri();?>/liaisons/images/traitement.svg" class="programme__traitementBoutonIcone" alt="Bouton du profil traitement des médias">
                     <p class="programme__traitementBoutonTitre"><?php echo get_post(678)->titre ?></p>
-                    <p class="programme__traitementBoutonPct"></p>
                 </div>
             </div>
 
@@ -82,13 +77,12 @@ echo "programme.php"; //À retirer éventuellement
                 <div class="programme__autreBouton">
                     <img src="<?php echo get_template_directory_uri();?>/liaisons/images/autre.svg" class="programme__autreBoutonIcone" alt="Bouton du profil autre">
                     <p class="programme__autreBoutonTitre"><?php echo get_post(681)->titre ?></p>
-                    <p class="programme__autreBoutonPct"></p>
                 </div>
             </div>
             </div>
         </div>
-        <div id="contenuDevId" tabindex="-1"> </div>
     <div class="programme__profilsContenuDeveloppe">
+        <div id="contenuDevId" tabindex="-1"> </div>
         <div class="programme__contenuDeveloppe" id="programmationDeveloppe">
             <h3 class="programme__profilsContenuDeveloppeTitre" id="titreContenuDeveloppe"><?php echo get_post(680)->titre ?></h3>
             <?php echo get_post(680)->texte ?>
@@ -120,7 +114,7 @@ echo "programme.php"; //À retirer éventuellement
                 <img src="<?php echo get_template_directory_uri();?>/liaisons/images/res4_01.png" class="programme__edujVignetteImage" alt="Image du responsable d'étudiant d'un jour">
                 <div class="programme__edujVignetteContenu">
                     <h4 class="programme__edujVignetteTitre"><?php echo get_post(640)->responsabilite ?></h4>
-                    <button class="programme__edujVignetteBoutonContact">Contacter <?php echo get_post(640)->prenom ?></button>
+                    <button class="programme__edujVignetteBoutonContact" onclick="window.location.href='./contact'" >Contacter <?php echo get_post(640)->prenom ?></button>
                     <p class="programme__edujVignetteCoordonnees"><?php echo get_post(640)->telephone ?></p>
                 </div>
             </div>

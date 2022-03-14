@@ -3,7 +3,6 @@
 /*Template name: Stages*/
 
 get_header();
-echo "stages.php"; //À retirer éventuellement
 ?>
 
     <main class="stages">
@@ -26,13 +25,13 @@ echo "stages.php"; //À retirer éventuellement
         <div class="stages__profilEtContact">
             <div class="stages__profilDeCompetences">
                 <img src="<?php echo get_template_directory_uri();?>/liaisons/images/image_stages.png" alt="Image d'étudiants" class="stages__profilDeCompetencesImage">
-                <button class="stages__profilDeCompetencesBouton">Profil de compétences des étudiants</button>
+                <button class="stages__profilDeCompetencesBouton" onclick="window.location.href='./programme'">Profil de compétences des étudiants</button>
             </div>
             <div class="stages__contactVignette">
                 <img src="<?php echo get_template_directory_uri();?>/liaisons/images/res3_01.png" class="stages__contactVignetteImage" alt="Image du responsable d'étudiant d'un jour">
                 <div class="stages__contactContenu">
                     <h4 class="stages__contactVignetteTitre"><?php echo get_post(639)->responsabilite ?></h4>
-                    <button class="stages__contactVignetteBoutonContact">Contacter <?php echo get_post(639)->prenom ?></button>
+                    <button class="stages__contactVignetteBoutonContact" onclick="window.location.href='./contact'">Contacter <?php echo get_post(639)->prenom ?></button>
                     <p class="stages__contactVignetteCoordonnees"><?php echo get_post(639)->telephone ?></p>
                 </div>
             </div>
